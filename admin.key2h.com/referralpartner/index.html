@@ -1,0 +1,860 @@
+  <!DOCTYPE html>
+  <html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Periyar World</title>
+    <link href="assets/img/fav.png" rel="shortcut icon" /> 
+
+    <meta property="og:image" content="https://dufflpreview.in/periyar_world/assets/img/gallery/gallery-banner.jpg" />
+    <meta property="og:title" content="Periyar World" />
+
+    <link href="assets/css/bootstrap5-3-2.min.css" rel="stylesheet"> 
+    <link href="assets/bootstrap-icons/bootstrap-icons.css" rel="stylesheet"> 
+    <link href="assets/css/header.css" rel="stylesheet">  
+    <link href="assets/css/language-selector.css" rel="stylesheet">  
+    <link href="assets/css/index.css" rel="stylesheet">  
+    <link href="assets/css/aos.css" rel="stylesheet"> 
+    <link href="assets/css/jquery.fancybox.min.css" rel="stylesheet">
+
+    <!-- Font-css --> 
+    <link href="assets/font/Hanken_Grotesk/styles.css" rel="stylesheet">
+    <link href="assets/font/Merriweather/styles.css" rel="stylesheet">
+    <link href="assets/font/Nunito_Sans/styles.css" rel="stylesheet">
+    <link href="assets/font/Crimson_Pro/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+
+
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/css/swiper.min.css'> 
+
+<style type="text/css">
+   header .navbar-nav .nav-link, .nav-container__menu a,.toggle-txt {
+    color: #ffffff; 
+    font-weight: 300 !important;}
+
+</style>
+
+  </head>
+
+  <body class=" ov-xy">  
+    <!-- Header --> 
+    <div class="position-relative none-scroll">
+    <header class="position-absolute top-0 w-100 z-2">
+    <nav class="navbar navbar-expand-lg navbar-light py-0">
+      <div class="container-fluid px-md-5 px-3">
+        <!-- Logo -->
+        <a class="navbar-brand py-2" href="index.html">
+          <img src="assets/img/logo.png" alt="Logo" class="d-inline-block align-text-top logo-img">
+        </a>
+
+
+        <div class="mbl-header ">
+          <div class="d-flex g-1">
+            <a href="" class='book-bg active add-active'>
+              <div class='book flex-column'>
+                <div id='book-shading'></div> 
+                <h1 class="ft-s">En<span>glish</span></h1> 
+              </div>
+            </a> 
+            <a href="" class='book-bg'>
+              <div class='book'>
+                <div id='book-shading'></div>
+                <h1 class="ft-s">த<span>மிழ்</span></h1> 
+              </div>
+            </a>
+            <a href="" class='book-bg'>
+              <div class='book flex-column'>
+                <div id='book-shading'></div> 
+                <h1 class="ft-s">स<span>मय</span></h1> 
+              </div>
+            </a>
+            <a href="" class='book-bg'>
+              <div class='book'>
+                <div id='book-shading'></div>
+                <h1 class="ft-s">Fr<span>ançais</span></h1>  
+              </div>
+            </a>
+          </div>
+        <!--  <div class="toggle-txt d-flex me-2">  
+          <span class="px-2"> EN </span>
+          <input type="checkbox" id="switchMbl" class="checkbox switchTranslate" />  
+          <label for="switchMbl" class="toggle"></label>
+          <span class="px-2 txt-tamil">த</span> 
+        </div> -->
+
+        <div class="burger-container">
+          <div class="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        
+      </div>
+      
+
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link  active"  aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="about.html">About</a>
+          </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="wishes-from-leaders.html">Wishes from Leaders</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="consultants.html">Consultants</a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li> -->
+            <li class="nav-item">
+              <a class="nav-link" href="timeline.html">Timeline</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="donate.aspx">Donate</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="updates.html">Updates</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li> 
+              <div class="d-flex g-1">
+                <a href="" class='book-bg active add-active'>
+              <div class='book flex-column'>
+                <div id='book-shading'></div> 
+                <h1 class="ft-s">En<span>glish</span></h1> 
+              </div>
+            </a> 
+            <a href="" class='book-bg'>
+              <div class='book'>
+                <div id='book-shading'></div>
+                <h1 class="ft-s">த<span>மிழ்</span></h1> 
+              </div>
+            </a>
+                <a href="" class='book-bg'>
+                  <div class='book flex-column'>
+                    <div id='book-shading'></div> 
+                    <h1 class="ft-s">स<span>मय</span></h1> 
+                  </div>
+                </a>
+                <a href="" class='book-bg'>
+                  <div class='book'>
+                    <div id='book-shading'></div>
+                    <h1 class="ft-s">Fr<span>ançais</span></h1>  
+                  </div>
+                </a>
+              </div>
+
+            </li>
+
+            <!-- <li class="nav-item toggle-txt d-flex ms-4 ps-2">  
+              <span class="px-2"> EN </span>
+              <input type="checkbox" id="switch" class="checkbox switchTranslate" />  
+              <label for="switch" class="toggle"></label>
+              <span class="px-2 txt-tamil">த</span> 
+            </li> -->
+          </ul>
+        </div>
+
+
+      </div>
+    </nav>
+  </header>
+  <!-- //Header -->
+
+
+  <div class="nav-container">
+    <div class="nav-container__menu">
+      <nav class="nav">
+        <ul>
+          <li>
+            <a class="active" href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="about.html">About</a>
+          </li> 
+          <li>
+            <a href="consultants.html">Consultants</a>
+          </li>
+          <li>
+            <a href="timeline.html">Timeline</a>
+          </li>
+          <li>
+            <a href="donate.aspx">Donate</a>
+          </li>
+          <li>
+            <a href="updates.html">Updates</a>
+          </li>
+          <li>
+            <a href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="nav-container__social">
+      <div class="social-icons">
+        <div class="social-icon">
+         <a class="nav-link px-1" href="" target="_blank">
+          <img src="assets/img/svg/fb.svg" alt="img" class="img-fluid">
+        </a> 
+      </div> 
+      <div class="social-icon">
+        <a class="nav-link px-1" href="" target="_blank">
+          <img src="assets/img/svg/insta.svg" alt="img" class="img-fluid">
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Banner Section --> 
+
+
+<!-- Banner Section -->
+<div class="sec-video">
+  <!-- <div class="overlay"></div> --> 
+  <!-- <img src="assets/img/index/home-banner.jpg" alt="img" class="img-fluid"> -->
+
+  <!-- Video element  id="myVideo" -->
+  <video muted loop playsinline autoplay width="100%">
+    <source src="assets/img/index/banner-video.mp4" type="video/mp4">
+    </video>
+
+    <!-- Play button -->
+   <!--  <div class="video-text" id="playButton">
+      <img src="assets/img/index/play.svg" alt="Play" class="img-fluid">
+    </div>
+ 
+    <div class="video-text" id="pauseButton" style="display: none;">
+      <img src="assets/img/index/pause.svg" alt="Pause" class="img-fluid">
+    </div> -->
+  </div>
+
+
+  <!-- //Banner Section -->
+
+  <section class="bg-sec-1 px-xl-5 px-4 pb-md-5 pb-4"> 
+   <div class="row">
+    <div class="col-md-11 col-12 text-center mx-auto">
+
+      <div class="banner-logo-sec" data-aos="slide-up">
+        <img src="assets/img/index/banner-logo.png" alt="img" class="img-fluid w-max-100">
+      </div>
+
+      <h4 class="n-w-75 mx-auto pb-2" data-aos="slide-up">Awaken the Rebel Within: Discover Periyar's Legacy</h4>
+      <p class="mb-0" data-aos="slide-up">Periyar, the father of the Self-Respect Movement, championed equality, rationalism, and the fight against caste oppression. A visionary who uplifted marginalized communities, he tirelessly promoted gender rights, education, and freedom of thought. As a leader of the Dravidian Movement, he celebrated Tamil identity and resisted linguistic domination.</p>
+      <p class="mb-0" data-aos="slide-up"> Periyar’s legacy continues to inspire the pursuit of a just and equitable society. </p>
+      <p class="pb-md-5 pb-3" data-aos="slide-up">Step into Periyar World, an iconic destination dedicated to honoring and amplifying the enduring values of Periyar, the visionary leader who advocated for equality, self-respect, and rational thought. At its center stands a breathtaking 95-foot monument, symbolizing the towering influence of Periyar’s ideals and inviting all to reflect on the transformative power of his teachings. This one-of-a-kind space is enriched with thoughtfully curated features to engage visitors. It’s a place where architecture, art, and activism converge to create a legacy that inspires generations to come.</p>
+
+    </div>
+  </div> 
+
+  <div class="quote-sec">
+   <div class="row sec-x-o">
+     <div class="col-md-10 col-lg-6 col-xl-5 mx-auto " data-aos="slide-up">
+       <div class="quote-sec-content d-flex justify-content-center px-md-4 px-4 py-md-3 py-4 py-lg-4">
+         <h6>Lets Globalize Periyar, <br>Periyarize the Globe</h6>
+         <img src="assets/img/index/quote.svg"  alt="img" class="img-fluid ps-3 ms-md-5 ms-0">
+       </div>
+     </div>
+   </div>
+ </div>
+</section>
+
+<section class="over-x-md-n">
+  <div class="px-md-0 px-3 pt-md-0 pt-4">
+    <div class="row">
+      <div class="col-lg-6 align-self-center pe-md-0 pe-3">
+        <img src="assets/img/index/bg-img-2.jpg" alt="img" class="img-fluid">
+      </div>
+      <div class="col-lg-6 align-self-center ps-md-0 ps-3">
+        <div class="bg-sec-2-content ps-0 ps-lg-5 pe-md-2 ps-md-2 ps-0 me-lg-5 me-0 ">
+          <div class="row py-4 align-items-center" style="min-height: 174px;">
+            <div class="col-4 text-center" data-aos="zoom-in">
+              <h5 class="mb-xl-0">1,20,000</h5>
+              <h6 class="mb-0">Sq.ft</h6>
+            </div>
+            <div class="col-4 text-center" data-aos="zoom-in">
+              <h5 class="mb-xl-0">108 Crs</h5>
+              <h6 class="mb-0">Estimated Value</h6>
+            </div>
+            <div class="col-4 text-center" data-aos="zoom-in">
+              <h5 class="mb-xl-0">25 Months</h5>
+              <h6 class="mb-0">Duration</h6>
+            </div>
+          </div>
+
+          <div class="row py-4 align-items-center" style="min-height: 174px;">
+            <div class="col-12">
+              <p class="mb-0 text-lg-start text-center" data-aos="slide-up">Periyar World is not just a monument but a dynamic space that educates, engages, and inspires people to challenge outdated norms and fight for a more equitable society. Come explore this unique space where architecture, history, and activism converge to create a legacy that transcends boundaries and builds a better world for all.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-black-img">
+  <div class="px-3 mx-lg-5 mx-md-4 mx-0">
+    <div class="row">
+      <div class="col-md-6 py-md-4 pb-3 pt-5 align-self-center">
+        <h4 class="mb-0 py-md-3 py-0 text-md-start text-center" data-aos="zoom-in">Art Meets Activism: A Sneak Peek into Periyar’s Realm</h4>
+      </div>
+      <div class="col-md-6 py-md-4 pt-2 pb-5 align-self-center">
+        <p class="mb-0 py-md-3 py-0 ps-md-5 ps-0 text-md-start text-center" data-aos="zoom-in">Explore our thoughtfully curated amenities that seamlessly blend art and activism for a transformative experience</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="gallery-sec">
+  <div class="video-set d-flex justify-content-between aos-init aos-animate" data-aos="fade-up">
+    <div class="video-one position-relative" style="width:49%;">
+
+      <a class="video-box change-fb-img-path-01" data-fancybox="gallery-img" href="assets/img/index/g-img-1.jpg">
+        <img src="assets/img/index/g-img-1.jpg" class="img-fluid video-hover">
+        <a href="gallery.html" class="view-gallery-btn" >
+          View Gallery
+        </a>
+      </a>
+
+    </div>
+    <div class="video-two position-relative" style="width:24%">
+      <a class="video-box change-fb-img-path-02" data-fancybox="gallery-img" href="assets/img/index/g-img-2.jpg">
+        <img src="assets/img/index/g-img-2.jpg" class="img-fluid video-hover">
+                    <!-- <div class="video-icon">
+                        <img src="./assets/img/team/svg/icon-img.svg">
+                      </div> -->
+                    </a> 
+                  </div>
+                  <div class="video-two position-relative" style="width:24%">
+                    <a class="video-box change-fb-img-path-03" data-fancybox="gallery-img" href="assets/img/index/g-img-3.jpg">
+                      <img src="assets/img/index/g-img-3.jpg" class="img-fluid video-hover"> 
+                    </a>
+                  </div>
+
+                  <div class="video-two position-relative" style="width:24%">
+                    <a class="video-box change-fb-img-path-04" data-fancybox="gallery-img" href="assets/img/index/g-img-4.jpg">
+                      <img src="assets/img/index/g-img-4.jpg" class="img-fluid video-hover">  
+                    </a>
+
+                  </div>
+                  <a href="assets/img/index/g-img-5.jpg" data-fancybox="gallery-img" class="change-fb-img-path-05"></a>
+                  <a href="assets/img/index/g-img-6.jpg" data-fancybox="gallery-img" class="change-fb-img-path-06"></a>
+                  <a href="assets/img/index/g-img-7.jpg" data-fancybox="gallery-img" class="change-fb-img-path-07"></a>
+                  <a href="assets/img/index/g-img-8.jpg" data-fancybox="gallery-img" class="change-fb-img-path-08"></a>
+                </div> 
+              </section>
+
+
+            <!--   <section class="">
+                <div class="px-md-5 px-xl-5 px-lg-2 px-3 mx-md-4 mx-xl-4 mx-lg-2 mx-0 mt-md-4 mt-5 mt-lg-5 pb-4 pt-3">
+                  <h2 class="text-center mb-lg-2  mb-md-2 mb-xl-4 mb-4" data-aos="slide-up">Wishes From Leaders</h2>
+                  <div class="main pt-3 pb-5" data-aos="slide-up"> 
+                    <div class="slider slider-nav">
+                      <div class=""> 
+                        <div class="card-sec m-md-3 mx-3 mt-xl-5 mt-lg-4 mt-sm-2 mt-5 mb-0">
+                          <img src="assets/img/index/person-img-1.jpg" class="img-fluid">
+                          <p class="mb-0">Lorem ipsum dolor sit amet consectetur. Tincidunt duis adipiscing sollicitudin hendrerit mauris gravida. Feugiat et auctor id sit. Arcu justo sit amet viverra sagittis blandit euismod auctor. Ridiculus facilisi nec non dolor</p>
+                        </div>
+                      </div>
+
+                      <div class=""> 
+                        <div class="card-sec m-md-3 mx-3 mt-xl-5 mt-lg-4 mt-sm-2 mt-5 mb-0">
+                          <img src="assets/img/index/person-img-2.jpg" class="img-fluid">
+                          <p class="mb-0">Lorem ipsum dolor sit amet consectetur. Tincidunt duis adipiscing sollicitudin hendrerit mauris gravida. Feugiat et auctor id sit. Arcu justo sit amet viverra sagittis blandit euismod auctor. Ridiculus facilisi nec non dolor</p>
+                        </div>
+                      </div>
+
+                      <div class=""> 
+                        <div class="card-sec m-md-3 mx-3 mt-xl-5 mt-lg-4 mt-sm-2 mt-5 mb-0">
+                          <img src="assets/img/index/person-img-1.jpg" class="img-fluid">
+                          <p class="mb-0">Lorem ipsum dolor sit amet consectetur. Tincidunt duis adipiscing sollicitudin hendrerit mauris gravida. Feugiat et auctor id sit. Arcu justo sit amet viverra sagittis blandit euismod auctor. Ridiculus facilisi nec non dolor</p>
+                        </div>
+                      </div>
+
+                      <div class=""> 
+                        <div class="card-sec m-md-3 mx-3 mt-xl-5 mt-lg-4 mt-sm-2 mt-5 mb-0">
+                          <img src="assets/img/index/person-img-2.jpg" class="img-fluid">
+                          <p class="mb-0">Lorem ipsum dolor sit amet consectetur. Tincidunt duis adipiscing sollicitudin hendrerit mauris gravida. Feugiat et auctor id sit. Arcu justo sit amet viverra sagittis blandit euismod auctor. Ridiculus facilisi nec non dolor</p>
+                        </div>
+                      </div>
+
+
+                    </div> 
+                  </div>
+                </div>
+              </section>
+
+ -->
+
+
+              <section class="py-5 mt-md-4 mt-0 over-x-md-n">
+                <div class="mx-md-0 mx-3">
+                  <div class="row sec-timeline">
+                    <div class="col-md-6 mt-md-0 mt-3">
+                      <a href="timeline.html" class="sec-timeline-l text-md-end text-center" data-aos="slide-up">
+                        <img src="assets/img/index/timeline.svg" alt="img" class="img-fluid">
+                        <span class="mx-lg-5 mx-3">TimeLine</span>
+                      </a>
+                    </div>
+                    <div class="col-md-6 mt-md-0 mt-3">
+                      <a href="updates.html" class=" sec-timeline-r text-md-start text-center" data-aos="slide-up">
+                        <span class="mx-lg-5 mx-3">Constructions Updates</span>
+                        <img src="assets/img/index/update.svg" alt="img" class="img-fluid"> 
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="sec-content">
+                <div class="px-4 pb-md-5 pb-4 pt-1">
+                  <div class="row">
+                    <div class="col-lg-8 col-md-9 mx-auto" data-aos="slide-up">
+                      <p class="mb-3">Periyar World proudly occupies an expansive 27-acre site in Siruganur, located just 25 kilometers from Trichy along the Chennai-Trichy National Highway. At its core stands an awe-inspiring 95-foot statue, elevated on a magnificent 60-foot base, reaching a total height of 155 feet from ground level. This towering monument symbolizes the profound influence of Periyar’s rationalist ideals, serving not only as a landmark but also as a powerful testament to the enduring legacy of equality, humanism, and progressive thought. Periyar World is designed to inspire visitors, inviting them to engage with the values that continue to shape a more just and equitable society.</p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="sec-img-po">
+                <img src="assets/img/index/bg-img-4.jpg" alt="img" class="img-fluid" data-aos="slide-up">
+                <div class="sec-img-po-contect">
+                  <h2 class="mb-1"  data-aos="zoom-in">Donate</h2>
+                  <p class="fw-bold mb-md-3 mb-2"  data-aos="zoom-in">Contribute to a legacy of change - support us in spreading Periyar’s legacy!</p>
+                  <p class="pt-md-4 pt-1 pb-md-5 pb-3 mb-3"  data-aos="zoom-in">There’s immense satisfaction in knowing that your support is a catalyst for change. Feel the pleasure of being part of something larger than yourself - a movement that aims to rewrite history, promote self-respect, and celebrate diversity.</p>
+                  <a href="donate.aspx"  data-aos="zoom-in">Know More</a>
+                </div>
+              </section> 
+
+
+              <section class="sec-content">
+                <div class="px-md-5 px-3 pb-5 pt-5">
+                  <div class="row">
+                    <div class="col-md-9 mx-auto text-center">
+                      <h4 class="pt-lg-3 pt-0" data-aos="slide-up">Collaborators in Vision and Impact</h4>
+                      <p class="pb-md-3 pd-4 pt-1" data-aos="slide-up">Our valued consultants are the driving force behind the realization of Periyar World, partnering with us to bring this visionary project to life. Together, we are building a global symbol of equality, knowledge, and progress.</p> 
+                      <a href="consultants.html" class="" data-aos="slide-up">More on Consultance</a> 
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+              <section class="sec-auto-slide mb-5 mt-3">
+                <div class="px-5 py-4" >
+                  <div class="row">
+                    <div class="col-md-12">
+                     <div class="swiper-container ">
+                      <!-- Additional required wrapper -->
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide" > 
+                          <div class="text-center px-md-4 px-4">  
+                            <img src="assets/img/index/slider-img-1.jpg" class="img-fluid px-md-4 px-1" >  
+                          </div>
+                        </div>
+                        <div class="swiper-slide"> 
+                          <div class="text-center px-md-2 px-3">  
+                            <img src="assets/img/index/slider-img-2.jpg" class="img-fluid">  
+                          </div>
+                        </div>
+
+                        
+
+                        <div class="swiper-slide"> 
+                          <div class="text-center px-md-4 px-3">  
+                            <img src="assets/img/index/slider-img-4.jpg" class="img-fluid" >  
+                          </div>
+                        </div>
+                        
+                        <div class="swiper-slide"> 
+                          <div class="text-center px-md-3 px-3">  
+                            <img src="assets/img/index/slider-img-5.jpg" class="img-fluid" >  
+                          </div>
+                        </div>
+
+                        <div class="swiper-slide"> 
+                          <div class="text-center px-md-5 px-4">  
+                            <img src="assets/img/index/slider-img-3.jpg" class="img-fluid p-md-2 p-2 " >  
+                          </div>
+                        </div>
+
+                        <div class="swiper-slide"> 
+                          <div class="text-center px-md-4 px-3">  
+                            <img src="assets/img/index/slider-img-6.jpg" class="img-fluid" >  
+                          </div>
+                        </div>
+
+
+                      </div> 
+                    </div>
+                  </div>
+                </div> 
+
+              </div>
+            </section>
+
+            <footer class="footer position-relative"> 
+
+              <div class="d-flex justify-content-center">
+    <h3 class="backToTopBtn-txt backToTopBtn">Back to Top</h3>
+    <button id="backToTopBtn" class="backToTopBtn btn btn-dark text-center">
+      <i class="bi bi-arrow-up-circle"></i>
+    </button>
+  </div>
+
+              <div class="px-md-5 px-3 mx-md-5 mx-0 pb-4  footer-AB-v-line">
+                <div class="d-flex align-self-center align-items-center justify-content-between mbl-flex-add">
+                  <div class="text-sm-start text-center pt-md-4 pt-4">
+                    <h6 class="mb-0">Periyar World</h6>
+                    <p class="mb-0">Siruganur, Trichy.</p>
+                  </div>
+                  <div class="text-md-start text-center social-media-sec pt-md-4 pt-2 mbl-flex-add" >
+
+                    <div class="d-flex justify-content-start align-items-center">
+                     <div class="img-w">
+                      <img src="assets/img/donate/svg/tel.svg" alt="img" class="img-fluid">
+                    </div>
+                    <div>
+                      <a href="tel:+91 XXXXX XXXXX" class="pe-3">+91 XXXXX XXXXX </a> <a href="tel:+91 XXXXX XXXXX">+91 XXXXX XXXXX </a>
+                    </div>
+                  </div>
+
+                  <div class="d-flex justify-content-start align-items-center pt-2">
+                   <div class="img-w">
+                    <img src="assets/img/donate/svg/mail.svg" alt="img" class="img-fluid">
+                  </div>
+                  <a href="mailto:enquiry@periyarworld.org" class="">enquiry@periyarworld.org</a>
+                </div>
+              </div>
+              <div class="text-md-start text-center pt-md-4 pt-3 social-media-sec">
+                <a href="" class="me-2" target="_blank">
+                  <img src="assets/img/donate/svg/fb.svg" alt="img" class="img-fluid img-light-clr">
+                </a>
+    <!-- <a href="" class="me-2" target="_blank">
+      <img src="assets/img/donate/svg/in.svg" alt="img" class="img-fluid img-light-clr">
+    </a> -->
+    <a href=""  target="_blank">
+      <img src="assets/img/donate/svg/insta.svg" alt="img" class="img-fluid img-light-clr">
+    </a>
+  </div>
+</div>
+</div>
+
+<div class="px-md-5 px-3 mx-md-5 mx-0 py-2">
+  <div class="row txt-footer">
+    <div class="col-sm-4 col-12 text-sm-start text-center py-1">
+     <span class="txt-footer">  &copy;
+      <script type="text/javascript">
+        var today = new Date()
+        var year = today.getFullYear()
+        document.write(year)
+      </script> PSRPI</span>
+    </div>
+    <div class="col-sm-4 col-12 text-center py-md-1 py-0">
+      <a href="privacy-policy.html" class="txt-footer">Privacy Policy</a> | 
+      <a href="termsandconditions.html" class="txt-footer">Terms & Conditions</a>
+    </div>
+    <div class="col-sm-4 col-12 text-sm-end text-center py-1">
+      <a href="https://duffldigital.com/" target="_blank" class="txt-footer duffl-txt">Duffl Digital </a>
+    </div>
+  </div>
+</div>
+</footer>
+</div>
+
+<!-- Back to Top Button -->
+ <!--  <button id="backToTopBtn" class="btn btn-primary">
+    <img src="assets/img/svg/backtotop.svg" alt="img" class="img-fluid">
+  </button> -->
+  
+  <!-- The Modal -->
+  <div class="modal " id="myModal">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content ">
+
+        <!-- Modal Header -->
+        <div class="modal-header pb-0 border border-0"> 
+          <button type="button" class="btn-close " data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body pt-0 px-5">
+          <h4>Lorem ipsum dolor</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate.</p>
+
+        </div>
+
+
+      </div>
+    </div>
+  </div> 
+  
+  <script src="assets/js/aos.js"></script>
+  <script src="assets/js/bootstrap-bundle.min.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/jquery.fancybox.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+  <!-- <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js'></script> -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.1/js/swiper.min.js'></script>
+
+  <script type="text/javascript">
+ $('.book-bg').hover(
+        function() { // Mouse enter
+            // Get the index of the current hovered book-bg
+            $('.book-bg').removeClass('active'); 
+            $('.book-bg').on('mouseleave', function() {
+              $('.book-bg.add-active').addClass('active');
+            });
+          }  
+          );
+    $(document).ready(function(){
+      $('.gallery-imgbox').click(function(){
+        var url = $(this).find('img').attr("data-value");
+        
+        // Fade out the big image, change the source, and fade it back in
+        $('.gallery-bigimage img').fadeOut(300, function() {
+          $(this).attr('src', url).fadeIn(300);
+        });
+        
+        // Remove 'active' class from other thumbnails and add to clicked one
+        $('.gallery-imgbox').removeClass('active');
+        $(this).addClass('active');
+      });
+    });
+
+  
+ // review-img-sec
+ $('.slider-nav').slick({
+  slidesToShow: 2,
+  slidesToScroll: 2,
+  dots: true, pauseOnHover: false,
+  focusOnSelect: true,
+  responsive: [
+  {
+      breakpoint: 991, // This will apply for screen widths less than 600px
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      } 
+    }
+    ] 
+  });
+
+ 
+ $(document).ready(function() {
+    // Swiper: Slider
+    new Swiper('.swiper-container', {
+      loop: true,
+      slidesPerView: 6, pauseOnHover: false,
+      spaceBetween: 0, variableWidth: true,   
+      paginationClickable: true, 
+        speed: 2400, // Control the speed of the scrolling
+        autoplay: {
+            delay: 0, // No delay between transitions
+            disableOnInteraction: false,
+          },
+          breakpoints: {
+            1920: {
+              slidesPerView: 6,
+              spaceBetween: 1
+            },
+            1028: {
+              slidesPerView: 4,
+              spaceBetween: 10
+            },
+            480: {
+              slidesPerView: 2,
+              spaceBetween: 10
+            }
+          }
+        });
+  });
+
+
+
+ 
+// menu
+nav = {
+  config: {
+    body: 'body',
+    navContainer: '.nav-container',
+    burger: '.burger',
+  },
+  qs: function(elem) {
+    return document.querySelector(elem);
+  },
+  handleMenu: function() {
+    const self = this;
+    const body = self.qs(self.config.body);
+    const burger = self.qs(self.config.burger);
+    
+    burger.addEventListener("click", function() {
+      body.classList.toggle("is--active");
+
+    });
+  },
+  init: function() {
+    const self = this;
+    
+    self.handleMenu();
+  }
+};
+
+// run
+nav.init(); 
+
+document.querySelectorAll('.nav-container__menu li').forEach((item, index) => {
+  item.style.setProperty('--index', index); // Set CSS variable for animation delay
+});
+
+document.querySelectorAll('.nav-container__social .social-icon').forEach((item, index) => {
+  item.style.setProperty('--index', index); // Set CSS variable for animation delay
+});
+
+// gallery sec
+$(document).ready(function () {
+  // Set initial styles and classes on page load
+  $('.video-set > div').css({ 'width': '24%' }).removeClass('no-overlay'); // Set all divs to 24% and show overlay
+  $('.video-set > div:first-child').css({ 'width': '49%' }).addClass('no-overlay'); // Set first div to 49% and hide overlay
+
+  // Hover functionality
+  $('.video-set > div').mouseenter(function () {
+    if ($(this).hasClass('video-one')) {
+      $('.video-set > div').css({ 'width': '24%' }).removeClass('no-overlay'); // Reset width and show overlay
+      $('.video-set > div:first-child').css({ 'width': '49%' }).addClass('no-overlay'); // Increase width and hide overlay
+    } else {
+      $('.video-set > div').css({ 'width': '24%' }).removeClass('no-overlay'); // Reset width and show overlay
+      $(this).css({ 'width': '49%' }).addClass('no-overlay'); // Increase width and hide overlay
+    }
+  });
+
+  // Mouse leave functionality
+  $('.video-set').mouseleave(function () {
+    $('.video-set > div').css({ 'width': '24%' }).removeClass('no-overlay'); // Reset all to initial width and show overlay
+    $('.video-set > div:first-child').css({ 'width': '49%' }).addClass('no-overlay'); // Keep the first div expanded and hide overlay
+  });
+
+  // Variables to track the current image set
+  let toggle = false;
+
+  // Function to toggle images between the two sets with fade effect
+  setInterval(function () {
+    if (!toggle) {
+      // Fade out current images and switch to the second set of images (g-img-5.jpg to g-img-8.jpg)
+ $('.video-set > div').eq(0).css({ 'background-image': 'url("assets/img/index/g-img-1.jpg")', 'background-size': 'cover', 'background-position': 'center', 'background-repeat': 'no-repeat' });
+ $('.video-set > div').eq(1).css({ 'background-image': 'url("assets/img/index/g-img-2.jpg")', 'background-size': 'cover', 'background-position': 'center', 'background-repeat': 'no-repeat' });
+ $('.video-set > div').eq(2).css({ 'background-image': 'url("assets/img/index/g-img-3.jpg")', 'background-size': 'cover', 'background-position': 'center', 'background-repeat': 'no-repeat' });
+ $('.video-set > div').eq(3).css({ 'background-image': 'url("assets/img/index/g-img-4.jpg")', 'background-size': 'cover', 'background-position': 'center', 'background-repeat': 'no-repeat' });
+ $('.video-set > div img').removeClass('slide-in slide-in1 slide-in2 slide-in3'); 
+        setTimeout(function () {
+        $('.video-set > div').eq(0).find('img').addClass('slide-in').attr('src', 'assets/img/index/g-img-5.jpg'); 
+        $('.video-set > div').eq(1).find('img').addClass('slide-in1').attr('src', 'assets/img/index/g-img-6.jpg');
+        $('.video-set > div').eq(2).find('img').addClass('slide-in2').attr('src', 'assets/img/index/g-img-7.jpg');
+        $('.video-set > div').eq(3).find('img').addClass('slide-in3').attr('src', 'assets/img/index/g-img-8.jpg');
+
+        
+        $('.change-fb-img-path-01').attr('href', 'assets/img/index/g-img-5.jpg');
+        $('.change-fb-img-path-02').attr('href', 'assets/img/index/g-img-6.jpg');
+        $('.change-fb-img-path-03').attr('href', 'assets/img/index/g-img-7.jpg');
+        $('.change-fb-img-path-04').attr('href', 'assets/img/index/g-img-8.jpg');
+        $('.change-fb-img-path-05').attr('href', 'assets/img/index/g-img-1.jpg');
+        $('.change-fb-img-path-06').attr('href', 'assets/img/index/g-img-2.jpg');
+        $('.change-fb-img-path-07').attr('href', 'assets/img/index/g-img-3.jpg');
+        $('.change-fb-img-path-08').attr('href', 'assets/img/index/g-img-4.jpg');
+ 
+      }, 1000); // Wait for the fade out transition to finish before switching images
+    } else {
+      // Fade out current images and switch back to the original set of images (g-img-1.jpg to g-img-4.jpg)
+   $('.video-set > div').eq(0).css({ 'background-image': 'url("assets/img/index/g-img-5.jpg")', 'background-size': 'cover', 'background-position': 'center', 'background-repeat': 'no-repeat' });
+ $('.video-set > div').eq(1).css({ 'background-image': 'url("assets/img/index/g-img-6.jpg")', 'background-size': 'cover', 'background-position': 'center', 'background-repeat': 'no-repeat' });
+ $('.video-set > div').eq(2).css({ 'background-image': 'url("assets/img/index/g-img-7.jpg")', 'background-size': 'cover', 'background-position': 'center', 'background-repeat': 'no-repeat' });
+ $('.video-set > div').eq(3).css({ 'background-image': 'url("assets/img/index/g-img-8.jpg")', 'background-size': 'cover', 'background-position': 'center', 'background-repeat': 'no-repeat' });
+ $('.video-set > div img').removeClass('slide-in slide-in1 slide-in2 slide-in3'); 
+        
+        setTimeout(function () {
+        $('.video-set > div').eq(0).find('img').addClass('slide-in').attr('src', 'assets/img/index/g-img-1.jpg');
+        $('.video-set > div').eq(1).find('img').addClass('slide-in1').attr('src', 'assets/img/index/g-img-2.jpg');
+        $('.video-set > div').eq(2).find('img').addClass('slide-in2').attr('src', 'assets/img/index/g-img-3.jpg');
+        $('.video-set > div').eq(3).find('img').addClass('slide-in3').attr('src', 'assets/img/index/g-img-4.jpg');
+        
+        
+        $('.change-fb-img-path-01').attr('href', 'assets/img/index/g-img-1.jpg');
+        $('.change-fb-img-path-02').attr('href', 'assets/img/index/g-img-2.jpg');
+        $('.change-fb-img-path-03').attr('href', 'assets/img/index/g-img-3.jpg');
+        $('.change-fb-img-path-04').attr('href', 'assets/img/index/g-img-4.jpg'); 
+        $('.change-fb-img-path-05').attr('href', 'assets/img/index/g-img-5.jpg');
+        $('.change-fb-img-path-06').attr('href', 'assets/img/index/g-img-6.jpg');
+        $('.change-fb-img-path-07').attr('href', 'assets/img/index/g-img-7.jpg');
+        $('.change-fb-img-path-08').attr('href', 'assets/img/index/g-img-8.jpg');
+         
+      }, 1000); // Wait for the fade out transition to finish before switching images
+    }
+
+    // Toggle the flag
+    toggle = !toggle;
+  }, 5000); // Change every 5 seconds (5000ms)
+});
+
+
+
+
+  // Show 'View Gallery' button on hover of the last image
+  // $('.video-set > div:last-child').hover(function () {
+  //   $(this).find('.view-gallery-btn').show(); 
+  // }, function () {
+  //   $(this).find('.view-gallery-btn').hide(); 
+  // });
+  
+
+
+// video play pause
+// document.addEventListener('DOMContentLoaded', function () {
+//   const video = document.getElementById('myVideo');
+//   const playButton = document.getElementById('playButton');
+//   const pauseButton = document.getElementById('pauseButton');
+
+//   playButton.addEventListener('click', function () {
+//     video.play();
+//     playButton.style.display = 'none';   
+//     pauseButton.style.display = 'block';  
+//   });
+
+//   pauseButton.addEventListener('click', function () {
+//     video.pause();
+//     pauseButton.style.display = 'none';  
+//     playButton.style.display = 'block';   
+//   });
+// });
+
+
+
+// Get the button back to top btn
+var backToTopBtns = document.querySelectorAll(".backToTopBtn");
+
+backToTopBtns.forEach(function(btn) {
+  btn.addEventListener("click", function() {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+});
+  </script>
+
+</body>
+
+</html>

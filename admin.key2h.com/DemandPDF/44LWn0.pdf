@@ -1,0 +1,431 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duffl Digital | Career Portal</title>
+    <link rel="icon" href="assets/img/fav-icon.png">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <form method="post" action="./careersdetails.aspx" onsubmit="javascript:return WebForm_OnSubmit();" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTM4MjI1NDE2NQ9kFgICAQ9kFgQCBA8PFgIeBFRleHQFATVkZAIUDxYCHgtfIUl0ZW1Db3VudAIFFgoCAQ9kFgZmDxUMATEGTmltZXNoF25pbWVzaEBkdWZmbGRpZ2l0YWwuY29tE1BBTExJS0FSQU5BSUNIRU5OQUkKOTk0MDE4ODMwOQdGcmVzaGVyAAAAAAARRGlnaXRhbCBNYXJrZXRpbmdkAgEPDxYCHg9Db21tYW5kQXJndW1lbnQFCmV4Y2VsMi5wZGZkZAICDxUDFFNvY2lhbCBNZWRpYSBNYW5hZ2VyAAoxOS0wOC0yMDI0ZAICD2QWBmYPFQwBMgt0ZXN0aW5nIHJhbRttdXRodXJhbWFuQGR1ZmZsZGlnaXRhbC5jb20ObXVsdGkgdW5pdmVyc2UKOTc4OTc4OTc4OQdGcmVzaGVyAAAAAAARRGlnaXRhbCBNYXJrZXRpbmdkAgEPDxYCHwIFDzEyLjA4LjIwMjQuZG9jeGRkAgIPFQMcRmFjZWJvb2svIEluc3RhZ3JhbSBDYW1wYWlnbgAKMTQtMDgtMjAyNGQCAw9kFgZmDxUMATMKTWlkaHVuIFMgUxhtaXRodW5taWl0aHUxNUBnbWFpbC5jb20LS2FueWFrdW1hcmkKOTQ4Njc0OTE1NgtFeHBlcmllbmNlZARUcnVlCzIuNSBZZWFyKHMpBjI1MDAwMBNWaXNpb24gR3JvdXAgUmV0YWlsABBHcmFwaGljIERlc2lnbmVyZAIBDw8WAh8CBRRNaWRodW5SZXN1bWUyMDI0LnBkZmRkAgIPFQMeQnJhbmQgSWRlbnRpdHkgRGVzaWducyxTb2NpYWwgBzYwIGRheXMKMTMtMDgtMjAyNGQCBA9kFgZmDxUMATQFbXV0aHUbbXV0aHVyYW1hbkBkdWZmbGRpZ2l0YWwuY29tCmFyYW50aGFuZ2kKOTc4OTc4ODk3OQdGcmVzaGVyAAAAAAAQR3JhcGhpYyBEZXNpZ25lcmQCAQ8PFgIfAgULUHJvZmlsZS5wZGZkZAICDxUDHkFkb2JlIFNvZnR3YXJlIFN1aXRlLFZpZGVvIEVkaQAKMDgtMDgtMjAyNGQCBQ9kFgZmDxUMATUDcmFtG211dGh1cmFtYW5AZHVmZmxkaWdpdGFsLmNvbQdjaGVubmFpCjk4Njc0OTU2ODQHRnJlc2hlcgAAAAAAEURpZ2l0YWwgTWFya2V0aW5nZAIBDw8WAh8CBQtQcm9maWxlLnBkZmRkAgIPFQMeRmFjZWJvb2svIEluc3RhZ3JhbSBDYW1wYWlnbixTAAowOC0wOC0yMDI0ZGQ7SgGdAXtX0iJJXe8DfAp4FHVPnmY8pqzPFjgK90raDA==" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=Yu-H62sIMfXuhjQxaUNMZdLGmtnt6wFPG6HBW1b3OW3tWjm9cLW3JgB2D5TNvUzj6pJ0kTxPXZ6u9mubBlYDgNob6Xq_zmZ1xn2M45NXI3Q1&amp;t=638458322066303468" type="text/javascript"></script>
+
+
+<script src="/WebResource.axd?d=lv8a026s2xafZzb1rGwcVPvSCzAl69oddzSgSyN3SIHt_s3Eq1HdrghX3__7aLdB1ofraaJkmWM2dUA-oaP_CEmjcayBrGh7mhq9-j4n7GM1&amp;t=638458322066303468" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="0EC688F1" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEdAAqZRngWzv/4RCZcioq+Y8P9tTfNpOz0CH4vKngBfzxDISct6Yy4Mja+fI7HS48swnWWWIA8pj4q9GaeJhWM25CIddx2jQpij18LUiDCb5acKvimCZ1qDb3Vu1ANG+xFuOWGgtsICVo8PvBaT9sP2O0HxgcNW+xXKvIuAeDfYOwLHtvqzfadgxPBFJLvyojoKIB/c0Vw2qJ+h9LzEeft2RMu9va4f82qlv210L40OWfN1iAigMHcQbNtW2GvE2w371Y=" />
+</div>
+        <div class="page-container">
+            <div class="custom-container">
+                <div class="top-header ">
+                    <div class="d-flex justify-content-between align-items-center py-2 border-btm-line">
+                        <div class="logo-section py-1">
+                            <a href="#" class="logo">
+                                <img src="assets/img/logo.png">
+                            </a>
+                        </div>
+                        <div>
+                            <div class="logout-sec py-1">
+                                <a id="LinkButton1" href="javascript:__doPostBack(&#39;LinkButton1&#39;,&#39;&#39;)">Log Out</a>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="py-3 text-center">
+                        <h2 class="page-title text-uppercase mb-0">Career Portal</h2>
+                    </div>
+
+                </div>
+                <div class="main-container p-4">
+                    <!-- <div class="overview-portal">
+              <div class="row">
+            <div class="col-6">
+              <div class="cart">
+                  <div class="icon-box"></div>
+                  <div>
+                      <h3 class="title">Graphic Designer</h3>
+                      <h2 class="value">08</h2>
+                  </div>
+              </div>
+          </div>
+          <div class="col-6">
+              <div class="cart">
+                  <div class="icon-box"></div>
+                  <div>
+                      <h3 class="title">Digital Marketing</h3>
+                      <h2 class="value">54</h2>
+                  </div>
+              </div>
+          </div>
+          </div>
+          </div> -->
+                    <div class="">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <p class="fw-bold mb-0">Total Applicants:<span id="lblrecordscount">5</span></p>
+                            </div>
+                            <div class="col-md-6 d-flex justify-content-end">
+                                <div class="search-parent  d-flex align-items-start">
+                                    <label class="my-2 mx-2 fw-bold">Search</label>
+                                    <div>
+                                        <div class="d-flex align-items-start">
+                                            <input name="txtSearch" type="text" id="txtSearch" class="form-control me-2" placeholder="" aria-controls="basic-datatables" autocomplete="off" />
+                                            
+
+
+                                            <input type="submit" name="btnSave" value="Go" onclick="if (formalidatePage()) { this.value=&#39;Please wait..&#39;; } else { return false; };WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;btnSave&quot;, &quot;&quot;, true, &quot;val1&quot;, &quot;&quot;, false, false))" id="btnSave" class="btn btn-outline-dark  me-1" />
+                                            <input type="button" id="bWait" class="btn btn-success ml-2" value="Please wait ..." disabled="disabled" style="display: none" />
+
+
+
+
+
+
+                                            
+                                            <input type="submit" name="btnClear" value="Clear" id="btnClear" class="btn btn-outline-dark  me-1" />
+
+                                            
+                                            
+                                        </div>
+
+                                        <span class="search-ref m-2 "><i>(Search by Name, Email Id, Mobile Number)</i></span>
+                                        <br>
+                                        <span class="error">
+                                            <span id="RequiredFieldValidator1" style="visibility:hidden;">Enter the value for search</span>
+                                            
+
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <div class="table-responsive">
+                            
+                            
+                                    <table class="table" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" class="border-0" style="min-width: 70px;">S.no</th>
+                                                <th scope="col" class="text-center border-0" style="min-width: 175px;">Name</th>
+                                                <th scope="col" class="text-center border-0" style="min-width: 200px;">Email Id</th>
+                                                <th scope="col" class="text-center border-0" style="min-width: 200px;">Location</th>
+                                                <th scope="col" class="text-center border-0" style="min-width: 200px;">Mobile no</th>
+                                                <th scope="col" class="text-center border-0" style="min-width: 200px;">Experience Level</th>
+                                                <th scope="col" class="text-center border-0" style="min-width: 200px;">Current employer</th>
+                                                <th scope="col" class="text-center border-0" style="min-width: 200px;">Year of Work Experiance</th>
+                                                <th scope="col" class="text-center border-0" style="min-width: 200px;">Current Drawn Salary</th>
+                                                <th scope="col" class="text-center border-0" style="min-width: 200px;">Current Employer Name</th>
+                                                <th scope="col" class="text-center border-0" style="min-width: 200px;">Last Drawn Salary</th>
+                                                <th scope="col" class="text-center border-0">Apply For</th>
+                                                <th scope="col" class="text-center border-0 ">Resume</th>
+                                                <th scope="col" class="text-center border-0" style="min-width: 250px;">Proficiency</th>
+                                                <th scope="col" class="text-center border-0">Notice Period</th>
+                                                <th scope="col" class="text-center border-0">Apply Date</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                
+                                    <tr>
+                                        <td class="custom-control custom-checkbox" style="width: 70px; padding-left: 0px;">
+                                            <span style="padding-left: 1px">1</span>
+                                            </div>
+                                        </td>
+                                        <td>Nimesh</td>
+                                        <td>nimesh@duffldigital.com</td>
+                                        <td>PALLIKARANAICHENNAI</td>
+                                        <td>9940188309</td>
+
+                                        <td>Fresher</td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td>Digital Marketing</td>
+
+
+                                        <td>
+                                            <div class="d-flex gap-3">
+                                                <a id="rprviewcareer_btndownload_0" class="btn btn-warning btn-sm download-resume-btn" href="javascript:__doPostBack(&#39;rprviewcareer$ctl01$btndownload&#39;,&#39;&#39;)"><i class="bi bi-download"></i><span class="ms-2">Download Resume</span></a>
+                                                
+                                                
+                                            </div>
+
+                                        </td>
+                                        <td>Social Media Manager</td>
+                                        <td></td>
+                                        <td>19-08-2024</td>
+
+
+
+
+
+                                    </tr>
+
+                                
+                                    <tr>
+                                        <td class="custom-control custom-checkbox" style="width: 70px; padding-left: 0px;">
+                                            <span style="padding-left: 1px">2</span>
+                                            </div>
+                                        </td>
+                                        <td>testing ram</td>
+                                        <td>muthuraman@duffldigital.com</td>
+                                        <td>multi universe</td>
+                                        <td>9789789789</td>
+
+                                        <td>Fresher</td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td>Digital Marketing</td>
+
+
+                                        <td>
+                                            <div class="d-flex gap-3">
+                                                <a id="rprviewcareer_btndownload_1" class="btn btn-warning btn-sm download-resume-btn" href="javascript:__doPostBack(&#39;rprviewcareer$ctl02$btndownload&#39;,&#39;&#39;)"><i class="bi bi-download"></i><span class="ms-2">Download Resume</span></a>
+                                                
+                                                
+                                            </div>
+
+                                        </td>
+                                        <td>Facebook/ Instagram Campaign</td>
+                                        <td></td>
+                                        <td>14-08-2024</td>
+
+
+
+
+
+                                    </tr>
+
+                                
+                                    <tr>
+                                        <td class="custom-control custom-checkbox" style="width: 70px; padding-left: 0px;">
+                                            <span style="padding-left: 1px">3</span>
+                                            </div>
+                                        </td>
+                                        <td>Midhun S S</td>
+                                        <td>mithunmiithu15@gmail.com</td>
+                                        <td>Kanyakumari</td>
+                                        <td>9486749156</td>
+
+                                        <td>Experienced</td>
+                                        <td>True</td>
+
+                                        <td>2.5 Year(s)</td>
+                                        <td>250000</td>
+                                        <td>Vision Group Retail</td>
+                                        <td></td>
+
+                                        <td>Graphic Designer</td>
+
+
+                                        <td>
+                                            <div class="d-flex gap-3">
+                                                <a id="rprviewcareer_btndownload_2" class="btn btn-warning btn-sm download-resume-btn" href="javascript:__doPostBack(&#39;rprviewcareer$ctl03$btndownload&#39;,&#39;&#39;)"><i class="bi bi-download"></i><span class="ms-2">Download Resume</span></a>
+                                                
+                                                
+                                            </div>
+
+                                        </td>
+                                        <td>Brand Identity Designs,Social </td>
+                                        <td>60 days</td>
+                                        <td>13-08-2024</td>
+
+
+
+
+
+                                    </tr>
+
+                                
+                                    <tr>
+                                        <td class="custom-control custom-checkbox" style="width: 70px; padding-left: 0px;">
+                                            <span style="padding-left: 1px">4</span>
+                                            </div>
+                                        </td>
+                                        <td>muthu</td>
+                                        <td>muthuraman@duffldigital.com</td>
+                                        <td>aranthangi</td>
+                                        <td>9789788979</td>
+
+                                        <td>Fresher</td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td>Graphic Designer</td>
+
+
+                                        <td>
+                                            <div class="d-flex gap-3">
+                                                <a id="rprviewcareer_btndownload_3" class="btn btn-warning btn-sm download-resume-btn" href="javascript:__doPostBack(&#39;rprviewcareer$ctl04$btndownload&#39;,&#39;&#39;)"><i class="bi bi-download"></i><span class="ms-2">Download Resume</span></a>
+                                                
+                                                
+                                            </div>
+
+                                        </td>
+                                        <td>Adobe Software Suite,Video Edi</td>
+                                        <td></td>
+                                        <td>08-08-2024</td>
+
+
+
+
+
+                                    </tr>
+
+                                
+                                    <tr>
+                                        <td class="custom-control custom-checkbox" style="width: 70px; padding-left: 0px;">
+                                            <span style="padding-left: 1px">5</span>
+                                            </div>
+                                        </td>
+                                        <td>ram</td>
+                                        <td>muthuraman@duffldigital.com</td>
+                                        <td>chennai</td>
+                                        <td>9867495684</td>
+
+                                        <td>Fresher</td>
+                                        <td></td>
+
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+
+                                        <td>Digital Marketing</td>
+
+
+                                        <td>
+                                            <div class="d-flex gap-3">
+                                                <a id="rprviewcareer_btndownload_4" class="btn btn-warning btn-sm download-resume-btn" href="javascript:__doPostBack(&#39;rprviewcareer$ctl05$btndownload&#39;,&#39;&#39;)"><i class="bi bi-download"></i><span class="ms-2">Download Resume</span></a>
+                                                
+                                                
+                                            </div>
+
+                                        </td>
+                                        <td>Facebook/ Instagram Campaign,S</td>
+                                        <td></td>
+                                        <td>08-08-2024</td>
+
+
+
+
+
+                                    </tr>
+
+                                
+                                    </tbody>
+</table>
+                                
+                        </div>
+                        <div class="d-flex justify-content-end d-block mt-2">
+                            
+
+                        </div>
+                    </div>
+                </div>
+                <script src="assets/js/bootstrap.min.js"></script>
+
+                <script>
+                    function validatePage1() {
+                        var flag = window.Page_ClientValidate('val1');
+                        return flag;
+                    }
+
+                </script>
+
+
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_Validators =  new Array(document.getElementById("RequiredFieldValidator1"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var RequiredFieldValidator1 = document.all ? document.all["RequiredFieldValidator1"] : document.getElementById("RequiredFieldValidator1");
+RequiredFieldValidator1.controltovalidate = "txtSearch";
+RequiredFieldValidator1.errormessage = "Enter the value for search";
+RequiredFieldValidator1.validationGroup = "val1";
+RequiredFieldValidator1.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+RequiredFieldValidator1.initialvalue = "";
+//]]>
+</script>
+
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        //]]>
+</script>
+</form>
+</body>
+</html>

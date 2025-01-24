@@ -1,0 +1,238 @@
+
+sp_helptext ViewAllLeadsource
+
+
+Create Procedure ViewAllLeadsource  
+  
+as  
+Begin  
+select * from tblLeadSource    
+End
+
+Update tblLeadSource set LeadSourceName='Referal' where LeadID=10
+
+
+
+select * from sys.tables
+select * from tblFlatCustomerBookingDetails
+select * from tblcustomerFlatBookingReferedby
+
+
+Create Table tblcustomerFlatBookingReferedby(RefID int Identity(1,1) primary key,Referedby nvarchar(50),AddedDate Datetime) 
+
+Insert into tblcustomerFlatBookingReferedby (Referedby,AddedDate)Values('Employee Referance',Getdate()),('Customer Referance',GetDate()),('Prospect Reference',GetDate())
+
+alter table tblFlatCustomerBookingDetails  add ReferedBy nvarchar(80)
+
+
+Create Procedure ViewFlatBookingReferedby
+As
+Begin
+select * from tblcustomerFlatBookingReferedby
+ENd
+
+
+
+
+sp_helptext AddFlatCustomerBookingDetails
+
+Alter Procedure AddFlatCustomerBookingDetails 
+@CustomerID int, 
+@ProjectID int, 
+@BlockID int,
+@FlatID int,
+@ApplicantFirstName varchar(255),
+@ApplicantLastName varchar(255),
+@CoapplicantFirstName varchar(255),
+@CoapplicantLastName varchar(255), 
+@Gender varchar(50),
+@EmailID varchar(255), 
+@Mobilenumber1 varchar(20),
+@Mobilenumber2 varchar(20),
+@FatherorSpouseName varchar(255),
+@DoB datetime, 
+@WhatsappNumber varchar(255), 
+@Profession varchar(255), 
+@CompanyName varchar(255), 
+@Designation varchar(255),
+@CurrentAddress varchar(500),
+@PermanentAddress varchar(500),
+@ResidentialStatus varchar(50),
+@CoapplicantRelationship varchar(255),
+@CityID int, 
+@StateID int, 
+@Pincode int, 
+@Reference1 varchar(255),
+@Reference2 varchar(255),
+@LeadSource int, 
+@LoanTakenStatus Bit, 
+@BankName nvarchar(255), 
+@ApplicantPhoto nvarchar(500),
+@ApplicantPAN nvarchar(50), 
+@ApplicantAadhar nvarchar(50), 
+@CoApplicantPhoto nvarchar(500),
+@CoApplicantPAN nvarchar(50), 
+@CoApplicantAadhar nvarchar(50),
+@PoAName varchar(255), 
+@PoAAddress varchar(500), 
+@PoAPAN varchar(50),
+@PoAAdhar varchar(50),
+@PoADOB datetime, 
+@CRMID int,
+@CustomerLoginStatus Bit,
+@BookingDate Datetime,
+@Amountpaid int,
+@PaymentMode Int, 
+@Bookingknowledgement nvarchar(255), 
+@CarparkAllocated bit,
+@NumberofSlots int, 
+@Allottedcarparkslotnumber nvarchar(255),
+@Registrationcharges int,
+@RegistrationDate Datetime, 
+@RegistrationOffice nvarchar(225),
+@ReferedBy nvarchar(80),
+@Addeddate Datetime, 
+@Addedby varchar(50),
+@FlatName varchar(256) As Begin     -- Insert into tblFlatCustomerBookingDetails    
+Insert into tblFlatCustomerBookingDetails(CustomerID,
+ProjectID,    
+BlockID, 
+FlatID, 
+ApplicantFirstName, 
+ApplicantLastName, 
+CoapplicantFirstName,  
+CoapplicantLastName,     Gender,     EmailID,     Mobilenumber1,     Mobilenumber2,     
+FatherorSpouseName,     DoB,      WhatsappNumber,     Profession,     CompanyName,     Designation,     CurrentAddress,     PermanentAddress,     ResidentialStatus,     CoapplicantRelationship,     CityID,     StateID,     Pincode,     Reference1,     Reference2,     LeadSource,     LoanTakenStatus,     BankName,     ApplicantPhoto,     ApplicantPAN,     ApplicantAadhar,     CoApplicantPhoto,     CoApplicantPAN,     CoApplicantAadhar,     PoAName,     PoAAddress,     PoAPAN,     PoAAdhar,     PoADOB,     
+CRMID,     CustomerLoginStatus,     BookingDate,     Amountpaid,     PaymentMode,     Bookingknowledgement,     CarparkAllocated,     NumberofSlots,     Allottedcarparkslotnumber,     Registrationcharges,     RegistrationDate,     RegistrationOffice,   ReferedBy,Addeddate,     Addedby     )      
+Values(@CustomerID,     @ProjectID,     @BlockID,     @FlatID,     @ApplicantFirstName,     @ApplicantLastName,     @CoapplicantFirstName,     @CoapplicantLastName,     @Gender,     @EmailID,     @Mobilenumber1,     @Mobilenumber2,     @FatherorSpouseName,     @DoB,      @WhatsappNumber,     @Profession,     @CompanyName,     @Designation,     @CurrentAddress,     @PermanentAddress,     @ResidentialStatus,     @CoapplicantRelationship,     @CityID,     @StateID,     @Pincode,     @Reference1,     @Reference2,     @LeadSource,     @LoanTakenStatus,     @BankName,     @ApplicantPhoto,     @ApplicantPAN,     @ApplicantAadhar,     @CoApplicantPhoto,     @CoApplicantPAN,     @CoApplicantAadhar,     @PoAName,     @PoAAddress,  
+   @PoAPAN,     @PoAAdhar,     @PoADOB,     @CRMID,     @CustomerLoginStatus,     @BookingDate,     @Amountpaid,     @PaymentMode,     @Bookingknowledgement,     @CarparkAllocated,     @NumberofSlots,     @Allottedcarparkslotnumber,     @Registrationcharges,     @RegistrationDate,     @RegistrationOffice,    @ReferedBy, @Addeddate,     @Addedby     );    
+   -- Update FlatLoginID using FlatID and @FlatName   
+   Update tblFlatCustomerBookingDetails     Set FlatLoginID = @FlatName + CAST(FlatID AS NVARCHAR(50)) 
+   Where FlatID = @FlatID;
+   End 
+
+
+
+   sp_helptext UpdateFlatCustomerBookingDetails
+
+
+       
+Alter Procedure UpdateFlatCustomerBookingDetails    
+    
+@FlatCustomerID int,    
+@CustomerID int,    
+@ProjectID int,    
+@BlockID int,    
+@FlatID int,    
+@ApplicantFirstName varchar(255),    
+@ApplicantLastName varchar(255),    
+@CoapplicantFirstName varchar(255),    
+@CoapplicantLastName varchar(255),    
+@Gender varchar(50),    
+@EmailID varchar(255),    
+@Mobilenumber1 varchar(20),    
+@Mobilenumber2 varchar(20),    
+@FatherorSpouseName varchar(255),    
+@DoB datetime,    
+@WhatsappNumber varchar(255),    
+@Profession varchar(255),    
+@CompanyName varchar(255),    
+@Designation varchar(255),    
+@CurrentAddress varchar(500),    
+@PermanentAddress varchar(500),    
+@ResidentialStatus varchar(50),    
+@CoapplicantRelationship varchar(255),    
+@CityID int,    
+@StateID int,    
+@Pincode int,    
+@Reference1 varchar(255),    
+@Reference2 varchar(255),    
+@LeadSource int,    
+@LoanTakenStatus Bit,    
+@BankName nvarchar(255),    
+@ApplicantPhoto nvarchar(500),    
+@ApplicantPAN nvarchar(50),    
+@ApplicantAadhar nvarchar(50),    
+@CoApplicantPhoto nvarchar(500),    
+@CoApplicantPAN nvarchar(50),    
+@CoApplicantAadhar nvarchar(50),    
+@PoAName varchar(255),    
+@PoAAddress varchar(500),    
+@PoAPAN varchar(50),    
+@PoAAdhar varchar(50),    
+@PoADOB datetime,    
+@CRMID int,    
+@CustomerLoginStatus Bit,    
+@BookingDate Datetime,    
+@Amountpaid int,    
+@PaymentMode Int,    
+@Bookingknowledgement nvarchar(255),    
+@CarparkAllocated bit,    
+@NumberofSlots int,    
+@Allottedcarparkslotnumber nvarchar(255),    
+@Registrationcharges int,    
+@RegistrationDate Datetime,    
+@RegistrationOffice nvarchar(225),    
+@ReferedBy nvarchar(80),    
+@Updateddate Datetime,    
+@UpdatedBy varchar(50)    
+As    
+Begin    
+Update tblFlatCustomerBookingDetails set     
+ProjectID=@ProjectID,    
+BlockID=@BlockID,    
+FlatID=@FlatID,    
+ApplicantFirstName=@ApplicantFirstName,    
+ApplicantLastName =@ApplicantLastName,    
+CoapplicantFirstName=@CoapplicantFirstName,    
+CoapplicantLastName=@CoapplicantLastName,    
+Gender=@Gender,    
+EmailID=@EmailID,    
+Mobilenumber1=@Mobilenumber1,    
+Mobilenumber2=@Mobilenumber2,    
+FatherorSpouseName=@FatherorSpouseName,    
+DoB=@DoB,     
+WhatsappNumber=@WhatsappNumber,    
+Profession=@Profession,    
+CompanyName=@CompanyName,    
+Designation=@Designation,    
+CurrentAddress=@CurrentAddress,    
+PermanentAddress=@PermanentAddress,    
+ResidentialStatus=@ResidentialStatus,    
+CoapplicantRelationship=@CoapplicantRelationship,    
+CityID=@CityID,    
+StateID=@StateID ,    
+Pincode=@Pincode ,    
+Reference1=@Reference1,    
+Reference2=@Reference2,    
+LeadSource=@LeadSource,    
+LoanTakenStatus=@LoanTakenStatus,    
+BankName=@BankName ,    
+ApplicantPhoto=@ApplicantPhoto,    
+ApplicantPAN=@ApplicantPAN ,    
+ApplicantAadhar=@ApplicantAadhar ,    
+CoApplicantPhoto=@CoApplicantPhoto ,    
+CoApplicantPAN=@CoApplicantPAN ,    
+CoApplicantAadhar=@CoApplicantAadhar ,    
+PoAName=@PoAName,    
+PoAAddress=@PoAAddress,    
+PoAPAN=@PoAPAN,    
+PoAAdhar=@PoAAdhar ,    
+PoADOB=@PoADOB,    
+CRMID=@CRMID,    
+CustomerLoginStatus=@CustomerLoginStatus,    
+BookingDate=@BookingDate,    
+Amountpaid=@Amountpaid,    
+PaymentMode=@PaymentMode,    
+Bookingknowledgement=@Bookingknowledgement,    
+CarparkAllocated=@CarparkAllocated ,    
+NumberofSlots=@NumberofSlots ,    
+Allottedcarparkslotnumber=@Allottedcarparkslotnumber,    
+Registrationcharges=@Registrationcharges,    
+RegistrationDate=@RegistrationDate,    
+RegistrationOffice=@RegistrationOffice,  
+ReferedBy=@ReferedBy,
+Updateddate=@Updateddate,    
+CustomerID =@CustomerID ,  
+UpdatedBy=@UpdatedBy  where  FlatCustomerID=@FlatCustomerID      
+End    

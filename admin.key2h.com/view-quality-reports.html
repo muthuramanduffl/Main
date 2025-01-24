@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title> Admin Dashboard | KEY2H</title>
+    <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+    <link rel="icon" href="assets/img/fav-icon.png" type="image/x-icon" />
+
+    <!-- Fonts and icons -->
+    <script src="assets/js/plugin/webfont/webfont.min.js"></script>
+    <script>
+        WebFont.load({
+            google: { "families": ["Lato:300,400,700,900"] },
+            custom: { "families": ["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['assets/css/fonts.min.css'] },
+            active: function () {
+                sessionStorage.fonts = true;
+            }
+        });
+    </script>
+
+    <!-- FontAwesome (for icons) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/atlantis.min.css"> 
+    <link rel="stylesheet" href="assets/bootstrap-icons/bootstrap-icons.css"> 
+    <link rel="stylesheet" href="assets/css/demo.css">
+</head>
+<style>
+
+</style>
+
+<body>
+    <div class="wrapper sidebar_minimize">
+        <div class="main-header">
+
+            <!-- Navbar Header -->
+            <nav class="navbar navbar-header navbar-expand-lg" data-background-color="white">
+
+                <div class="container-fluid">
+                    <div>
+
+                        <a href="dashboard.html" class="logo">
+                            <img src="assets/img/logo.png" width="150" alt="navbar brand" class="navbar-brand">
+                        </a>
+                    </div>
+                    <div class="collapse" id="search-nav">
+                        <!-- <form class="navbar-left navbar-form nav-search mr-md-3">
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <button type="submit" class="btn btn-search pr-1">
+                                        <i class="fa fa-search search-icon"></i>
+                                    </button>
+                                </div>
+                                <input type="text" placeholder="Search ..." class="form-control">
+                            </div>
+                        </form> -->
+                    </div>
+                    <ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+                        <li class="nav-item toggle-nav-search hidden-caret">
+                            <a class="nav-link" data-toggle="collapse" href="#search-nav" role="button"
+                            aria-expanded="false" aria-controls="search-nav">
+                            <i class="fa fa-search"></i>
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown hidden-caret">
+                        <a class="nav-link dropdown-toggle" href="#" id="notifDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa fa-bell"></i>
+                        <span class="notification">3</span>
+                    </a>
+                    <ul class="dropdown-menu notif-box animated fadeIn" aria-labelledby="notifDropdown">
+                        <li>
+                            <div class="dropdown-title">You have 3 new notification</div>
+                        </li>
+                        <li>
+                            <div class="notif-scroll scrollbar-outer">
+                                <div class="notif-center">
+                                    <a href="#">
+                                        <div class="notif-icon notif-primary"> <i class="fa fa-user"></i>
+                                        </div>
+                                        <div class="notif-content">
+                                            <span class="block">
+                                                2 Follow-ups have been closed
+                                            </span>
+                                            <span class="time">5 minutes ago</span>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="notif-icon notif-primary"> <i class="fa fa-user"></i></div>
+                                        <div class="notif-content">
+                                            <span class="block">
+                                                4 New leads have been received
+                                            </span>
+                                            <span class="time">12 minutes ago</span>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="notif-icon notif-primary"> <i class="fa fa-user"></i></div>
+                                                <!-- <div class="notif-img"> 
+                                                    <img src="assets/img/profile2.jpg" alt="Img Profile">
+                                                </div> -->
+                                                <div class="notif-content">
+                                                    <span class="block">
+                                                        A lead status has been updated
+                                                    </span>
+                                                    <span class="time">12 minutes ago</span>
+                                                </div>
+                                            </a> 
+                                        </div>
+                                    </div>
+                                </li> 
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown hidden-caret">
+                            <a class="dropdown-toggle profile-pic" data-bs-toggle="dropdown" href="#" aria-expanded="false">
+                                <div class="avatar-sm">
+                                    <i class="fa fa-user"></i>
+                                    <!-- <img src="assets/img/user.png" alt="img" class="avatar-img rounded-circle"> -->
+                                </div>
+                            </a>
+                            <ul class="dropdown-user dropdown-menu dropdown-menu-end animated fadeIn">
+                                <div class="dropdown-user-scroll scrollbar-outer">
+                                    <li>
+                                        <div class="user-box">
+                                            <div class="avatar-lg"><img src="assets/img/user.png" alt="image profile"
+                                                class="avatar-img rounded"></div>
+                                                <div class="u-text">
+                                                    <h4>XXXXX</h4>
+                                                    <p class="text-muted">xxxx@gmail.com</p>
+                                                    <!-- <a href="profile.html" class="btn btn-xs btn-secondary btn-sm">View Profile</a> -->
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="dropdown-divider"></div> 
+                                            <a class="dropdown-item text-center" href="#">Logout</a>
+                                        </li>
+                                    </div>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- End Navbar -->
+                <div id="dvadminmenu" class="menu-1" style="display:block;">
+                    <div class="menu-tab nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link " data-bs-toggle="tab" href="#tab-1">
+                                <i class="fa fa-home" aria-hidden="true"></i> Projects
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#tab-2">
+                                <i class="fa fa-users" aria-hidden="true"></i> Blocks
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#tab-3">
+                                <i class="fa fa-building-o" aria-hidden="true"></i> Flats
+                            </a>
+                        </li>
+                        <li class="nav-item submenu">
+                            <a class="nav-link active" data-bs-toggle="tab" href="#tab-4">
+                                <i class="fa fa-money" aria-hidden="true"></i> Customers
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#tab-5">
+                                <i class="fa fa-bar-chart" aria-hidden="true"></i> Flat Customization
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#tab-6">
+                                <i class="fa fa-line-chart" aria-hidden="true"></i> Reports
+                            </a>
+                        </li>
+                    <!-- <a href="https://duffldemo.in/Metroconnect/Dashboard.aspx"
+                        style="position: absolute; right: 15px; top: 31%; color: #fff; text-decoration: none; text-transform: uppercase; letter-spacing: .5px;">
+                        Home
+                    </a> -->
+                </div>
+                
+                <div class="tab-content">
+                    <div class="tab-pane fade" id="tab-1">
+                        <!-- Content for Tab 1 -->
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="add-project.html">
+                                    <i class="fa fa-line-chart" aria-hidden="true"></i> 
+                                    Add Projects
+                                </a>
+                            </li> 
+                            <li>
+                                <a href="view-project.html">
+                                    <i class="fa fa-line-chart" aria-hidden="true"></i> 
+                                    View Projects
+                                </a>
+                            </li> 
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="tab-2">
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="add-block.html">
+                                    <i class="fa fa-line-chart" aria-hidden="true"></i> 
+                                    Add Blocks
+                                </a>
+                            </li> 
+                            <li>
+                                <a href="view-block.html">
+                                    <i class="fa fa-line-chart" aria-hidden="true"></i> 
+                                    View Blocks
+                                </a>
+                            </li> 
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="tab-3">
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="add-flat.html">
+                                    <i class="fa fa-line-chart" aria-hidden="true"></i> 
+                                    Add Flats
+                                </a>
+                            </li> 
+                            <li>
+                                <a href="view-flat.html">
+                                    <i class="fa fa-line-chart" aria-hidden="true"></i> 
+                                    View Flats
+                                </a>
+                            </li> 
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade show active" id="tab-4">
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="add-customer.html">
+                                    <i class="fa fa-line-chart" aria-hidden="true"></i> 
+                                    Add Customers
+                                </a>
+                            </li> 
+                            <li>
+                                <a href="view-customer.html">
+                                    <i class="fa fa-line-chart" aria-hidden="true"></i> 
+                                    View Customers
+                                </a>
+                            </li> 
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="tab-5">
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="">
+                                    <i class="fa fa-line-chart" aria-hidden="true"></i> 
+                                    Add Flat
+                                </a>
+                            </li>   
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="tab-6">
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="">
+                                    <i class="fa fa-line-chart" aria-hidden="true"></i> 
+                                    Add Report
+                                </a>
+                            </li>   
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+
+        <div class="main-panel">
+            <div class="content">
+                <div class="panel-header bg-primary-gradient">
+                    <div class="page-inner py-5">
+                        <div class="d-flex pb-2 align-items-left align-items-sm-center flex-column flex-sm-row justify-content-between">
+                            <div class="d-flex">
+                                <h2 class="text-white mb-0 fw-bold text-uppercase">View Quality Reports</h2>
+                                <ul class="breadcrumbs">
+                                    <li class="nav-home pt-1">
+                                        <a href="dashboard.html">
+                                            <i class="fa fa-home"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="text-end">
+                                <a class="me-3 " data-bs-toggle="tooltip" title="Export to excel">
+                                    <img src="assets/img/excel.jpg" alt="excel" class="img-fluid add-view-img bor-green p-0">
+                                </a>
+                                <a href="add-quality-reports.html" data-bs-toggle="tooltip" title="Add page">
+                                    <img class="add-view-img" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB4PSIwIiB5PSIwIiB2aWV3Qm94PSIwIDAgMzIgMzIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPjxnIGZpbGw9IiM2NjIxYmEiPjxwYXRoIGQ9Ik0yNS41MyAyMS41MzVhLjkuOSAwIDAgMC0uOS45di41NGMwIC42MDYtLjQ5NCAxLjEtMS4xIDEuMUg4LjE1Yy0uNjA2IDAtMS4xLS40OTQtMS4xLTEuMXYtMTguMWMwLS42MDYuNDk0LTEuMSAxLjEtMS4xaDE1LjM4Yy42MDYgMCAxLjEuNDk0IDEuMSAxLjF2Mi44YS45LjkgMCAwIDAgMS44IDB2LTIuOGMwLTEuNTk5LTEuMzAxLTIuOS0yLjktMi45SDguMTVhMi45MDMgMi45MDMgMCAwIDAtMi45IDIuOXYxLjI0NEg0YTIuOTAzIDIuOTAzIDAgMCAwLTIuOSAyLjl2MTguMTA2YzAgMS41OTkgMS4zMDEgMi45IDIuOSAyLjloMTUuMzc4YzEuNTk5IDAgMi45LTEuMzAxIDIuOS0yLjl2LTEuMjVoMS4yNTJjMS41OTkgMCAyLjktMS4zMDEgMi45LTIuOXYtLjU0YS45LjkgMCAwIDAtLjktLjl6bS01LjA1MiA1LjU5YzAgLjYwNi0uNDk0IDEuMS0xLjEgMS4xSDRjLS42MDYgMC0xLjEtLjQ5NC0xLjEtMS4xVjkuMDE5YzAtLjYwNi40OTQtMS4xIDEuMS0xLjFoMS4yNXYxNS4wNTdjMCAxLjU5OSAxLjMwMSAyLjkgMi45IDIuOWgxMi4zMjh6IiBmaWxsPSIjNjYyMWJhIiBvcGFjaXR5PSIxIiBkYXRhLW9yaWdpbmFsPSIjNjYyMWJhIiBjbGFzcz0iIj48L3BhdGg+PHBhdGggZD0iTTEzLjUgNy41ODFoLTIuMzQzYS45LjkgMCAwIDAgMCAxLjhIMTMuNWEuOS45IDAgMCAwIDAtMS44ek0xOC42NCAxMi4xMTVhLjkuOSAwIDAgMC0uOS0uOWgtNi41OGEuOS45IDAgMCAwIDAgMS44aDYuNThhLjkuOSAwIDAgMCAuOS0uOXpNMTEuMTYgMTQuODQ1YS45LjkgMCAwIDAgMCAxLjhoNmEuOS45IDAgMCAwIDAtMS44ek0xMS4xNiAyMC4yNzVoNy4zNmEuOS45IDAgMCAwIDAtMS44aC03LjM2YS45LjkgMCAwIDAgMCAxLjh6IiBmaWxsPSIjNjYyMWJhIiBvcGFjaXR5PSIxIiBkYXRhLW9yaWdpbmFsPSIjNjYyMWJhIiBjbGFzcz0iIj48L3BhdGg+PC9nPjxwYXRoIGZpbGw9IiNmOThhMTciIGQ9Im0zMC42MzYgMTkuODM5LTIuMDU1LTIuMDU1YzEuMjg5LTEuODg4IDEuMTAzLTQuNDg5LS41NzItNi4xNjNhNC44NiA0Ljg2IDAgMCAwLTYuODY0IDAgNC44NTkgNC44NTkgMCAwIDAgMCA2Ljg2MyA0Ljg0OCA0Ljg0OCAwIDAgMCA2LjE2My41NzJsMi4wNTQgMi4wNTRhLjg5Ny44OTcgMCAwIDAgMS4yNzIgMCAuODk1Ljg5NSAwIDAgMCAuMDAyLTEuMjcxem0tOC4yMTctMi42MjdhMy4wNTggMy4wNTggMCAwIDEgMC00LjMxOGMuNTk1LS41OTUgMS4zNzctLjg5MyAyLjE1OS0uODkzczEuNTY0LjI5OCAyLjE1OS44OTNhMy4wNTggMy4wNTggMCAwIDEgMCA0LjMxOGMtMS4xNTMgMS4xNTQtMy4xNjUgMS4xNTQtNC4zMTggMHoiIG9wYWNpdHk9IjEiIGRhdGEtb3JpZ2luYWw9IiNmOThhMTciIGNsYXNzPSIiPjwvcGF0aD48L2c+PC9zdmc+" />
+                                </a>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <div class="page-inner mt--5">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card"> 
+                                <div class="card-body">
+
+                                    <div class="form-group p-0">
+
+                                        <div class="row mb-4"> 
+                                            <div class="col-md-3 pt-3">
+                                                <div class="input-icon input-icon-sm right">
+                                                    <label>Project Name </label>
+                                                    <i class="bi bi-journal-bookmark-fill b5-icon"></i>
+                                                    <select class="bs-select form-control input-sm">
+                                                        <option selected>All</option> 
+                                                        <option>Project 1</option>
+                                                        <option>Project 2</option> 
+                                                        <option>Project 3</option> 
+                                                    </select>
+                                                </div>
+                                            </div>  
+                                            
+                                            <div class="col-md-2 pt-3">
+                                                <div class="input-icon input-icon-sm right">
+                                                    <label>Display Status </label> 
+                                                    <i class="bi bi-check2-square b5-icon"></i>
+                                                    <select class="bs-select form-control input-sm">
+                                                        <option selected>All</option> 
+                                                        <option value="Active">Active</option>
+                                                        <option value="Inactive">Inactive</option> 
+                                                    </select>  
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2 pt-3 d-flex">
+                                                <div class="b5-icon-search me-3" data-bs-toggle="tooltip" title="Search"> 
+                                                    <i class="bi bi-binoculars"></i>
+                                                </div>
+                                                <div class="b5-icon-reset" data-bs-toggle="tooltip" title="Reset"> 
+                                                    <i class="bi bi-repeat"></i>
+                                                </div>
+                                            </div>
+                                            
+                                            
+                                        </div>
+
+                                        <h5><span class="box-b-only p-1">Total no. of Quality Reports : 2</span></h5>
+                                    </div>
+                                    <div class="table-responsive">
+                                        <table class="table table-bordered">
+                                          <thead>
+                                            <tr>
+                                              <th class="w-sno">#</th>
+                                              <th>Project Name </th>
+                                              <th>Title</th> 
+                                              <th>Display Status</th> 
+                                              <th>Action </th> 
+                                          </tr>
+                                      </thead>
+                                      <tbody>
+                                        <tr>
+                                          <td>1</td>
+                                          <td>Project 1</td>
+                                          <td>Title 1</td> 
+                                          <td>
+                                            <div class="btn-active"><i class="bi bi-shield-check"></i> Active</div> 
+                                        </td> 
+                                        <td>
+                                            
+                                            <a href="add-quality-reports.html" class="ms-2 me-1">
+                                                <img class="edit-img" data-bs-toggle="tooltip" title="Edit" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB4PSIwIiB5PSIwIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PGxpbmVhckdyYWRpZW50IGlkPSJhIiB4MT0iMTAuMjQ4IiB4Mj0iNTAxLjk5OCIgeTE9IjI2MS43OTQiIHkyPSIyNTAuMDg1IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjNThjOGRkIj48L3N0b3A+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjNTNhN2RkIj48L3N0b3A+PC9saW5lYXJHcmFkaWVudD48cGF0aCBmaWxsPSJ1cmwoI2EpIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00NjkuMTA2IDk4LjMxN1Y0NDEuMzNoMzMuNTI1Vjk4LjMxN3pNNDUxLjM1NCA0NDEuMzNWOTguMzE3aC0zMy41MjVWNDQxLjMzek00MTcuODI5IDgwLjU2Nmg4NC44VjU5LjM1OGgtODQuOHptMC0zOC45NTloODQuOFYyMC43QTIwLjc2OSAyMC43NjkgMCAwIDAgNDgxLjk0NCAwaC00My40M2EyMC43NzMgMjAuNzczIDAgMCAwLTIwLjY4NSAyMC43em03OS40MTcgNDE3LjQ3NGgtNzQuMDNsMzcuMDE1IDUwLjA3OXpNNzguNDg1IDQzNi40N2gyMzYuMTIzYTguMjE1IDguMjE1IDAgMCAwIDAtMTYuNDI5SDc4LjQ4NWE4LjIxNSA4LjIxNSAwIDAgMCAwIDE2LjQyOXptMC04NS40NTRoMjM2LjEyM2E4LjIxMSA4LjIxMSAwIDEgMCAwLTE2LjQyMkg3OC40ODVhOC4yMTEgOC4yMTEgMCAxIDAgMCAxNi40MjJ6bTAtODUuNDMyaDIzNi4xMjNhOC4yMjMgOC4yMjMgMCAwIDAgMC0xNi40NDVINzguNDg1YTguMjIzIDguMjIzIDAgMCAwIDAgMTYuNDQ1em0wLTg1LjQ1NGgyMzYuMTIzYTguMjExIDguMjExIDAgMSAwIDAtMTYuNDIySDc4LjQ4NWE4LjIxMSA4LjIxMSAwIDEgMCAwIDE2LjQyMnptMC04NS40NTVoMjM2LjEyM2E4LjIxMSA4LjIxMSAwIDEgMCAwLTE2LjQyMkg3OC40ODVhOC4yMTEgOC4yMTEgMCAxIDAgMCAxNi40MjJ6TTQyLjgyOSAyLjcxNmgzMDcuNDM2YTMzLjUyOCAzMy41MjggMCAwIDEgMzMuNDYgMzMuNDYzVjQ3OC41NGEzMy41MTYgMzMuNTE2IDAgMCAxLTMzLjQ2IDMzLjQ2SDQyLjgyOWEzMy41MTkgMzMuNTE5IDAgMCAxLTMzLjQ2MS0zMy40NlYzNi4xNzlBMzMuNTMxIDMzLjUzMSAwIDAgMSA0Mi44MjkgMi43MTZ6IiBvcGFjaXR5PSIxIiBkYXRhLW9yaWdpbmFsPSJ1cmwoI2EpIj48L3BhdGg+PC9nPjwvc3ZnPg==" />
+                                            </a>
+                                            <a class="swtAltDelete">
+                                                <img class="dlt-img" data-bs-toggle="tooltip" title="Delete" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB4PSIwIiB5PSIwIiB2aWV3Qm94PSIwIDAgMzIgMzIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xhc3M9IiI+PGc+PGxpbmVhckdyYWRpZW50IGlkPSJhIiB4MT0iMCIgeDI9IjEiIHkxPSIwIiB5Mj0iMCIgZ3JhZGllbnRUcmFuc2Zvcm09Im1hdHJpeCgyMy4yNDIgMCAwIDI3LjgyMyAzLjg3OSA2NC4wODgpIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agc3RvcC1vcGFjaXR5PSIxIiBzdG9wLWNvbG9yPSIjYjQwMDAxIiBvZmZzZXQ9IjAiPjwvc3RvcD48c3RvcCBzdG9wLW9wYWNpdHk9IjEiIHN0b3AtY29sb3I9IiNlZDNhM2EiIG9mZnNldD0iMSI+PC9zdG9wPjwvbGluZWFyR3JhZGllbnQ+PHBhdGggZmlsbD0idXJsKCNhKSIgZD0ibTEyLjc0NCA1NC4yODktOC44NjUgMi4yMS4yNDIuOTcgMi4zOTYtLjU5Ny44MDIgMTYuODQyQTQuNSA0LjUgMCAwIDAgMTEuODE0IDc4aDguMzcyYTQuNSA0LjUgMCAwIDAgNC40OTUtNC4yODZsLjgxOC0xNy4xOUEuNDk5LjQ5OSAwIDAgMCAyNSA1NkgxMC4wMTVsMTcuMTA2LTQuMjY1LS4yNDItLjk3LTYuNTQ4IDEuNjMyLS45MTUtMS45MzRhLjUuNSAwIDAgMC0uNTczLS4yNzFsLTUuODIxIDEuNDUxYS41LjUgMCAwIDAtLjM3OS41MDl6TTExLjUgNjB2MTNoMVY2MHptNCAwdjEzaDFWNjB6bTQgMHYxM2gxVjYwem0tMy42MzktNi40ODgtMi4xMjguNTMtLjA3Mi0xLjUyOCA1LjAyNy0xLjI1My42NTQgMS4zODN6IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIC00OCkiIG9wYWNpdHk9IjEiIGRhdGEtb3JpZ2luYWw9InVybCgjYSkiIGNsYXNzPSIiPjwvcGF0aD48L2c+PC9zdmc+" />
+                                            </a>
+                                        </td> 
+                                    </tr>
+                                    <tr>
+                                      <td>2</td>
+                                      <td>Project 2</td>
+                                      <td>Title 2</td> 
+                                      <td>  
+                                        <div class="btn-inactive"><i class="bi bi-shield-x"></i> Inactive</div> 
+                                    </td> 
+                                    <td> 
+                                       
+                                        <a href="add-quality-reports.html" class="ms-2 me-1">
+                                            <img class="edit-img" data-bs-toggle="tooltip" title="Edit" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB4PSIwIiB5PSIwIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiIgc3R5bGU9ImVuYWJsZS1iYWNrZ3JvdW5kOm5ldyAwIDAgNTEyIDUxMiIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PGxpbmVhckdyYWRpZW50IGlkPSJhIiB4MT0iMTAuMjQ4IiB4Mj0iNTAxLjk5OCIgeTE9IjI2MS43OTQiIHkyPSIyNTAuMDg1IiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjNThjOGRkIj48L3N0b3A+PHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjNTNhN2RkIj48L3N0b3A+PC9saW5lYXJHcmFkaWVudD48cGF0aCBmaWxsPSJ1cmwoI2EpIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00NjkuMTA2IDk4LjMxN1Y0NDEuMzNoMzMuNTI1Vjk4LjMxN3pNNDUxLjM1NCA0NDEuMzNWOTguMzE3aC0zMy41MjVWNDQxLjMzek00MTcuODI5IDgwLjU2Nmg4NC44VjU5LjM1OGgtODQuOHptMC0zOC45NTloODQuOFYyMC43QTIwLjc2OSAyMC43NjkgMCAwIDAgNDgxLjk0NCAwaC00My40M2EyMC43NzMgMjAuNzczIDAgMCAwLTIwLjY4NSAyMC43em03OS40MTcgNDE3LjQ3NGgtNzQuMDNsMzcuMDE1IDUwLjA3OXpNNzguNDg1IDQzNi40N2gyMzYuMTIzYTguMjE1IDguMjE1IDAgMCAwIDAtMTYuNDI5SDc4LjQ4NWE4LjIxNSA4LjIxNSAwIDAgMCAwIDE2LjQyOXptMC04NS40NTRoMjM2LjEyM2E4LjIxMSA4LjIxMSAwIDEgMCAwLTE2LjQyMkg3OC40ODVhOC4yMTEgOC4yMTEgMCAxIDAgMCAxNi40MjJ6bTAtODUuNDMyaDIzNi4xMjNhOC4yMjMgOC4yMjMgMCAwIDAgMC0xNi40NDVINzguNDg1YTguMjIzIDguMjIzIDAgMCAwIDAgMTYuNDQ1em0wLTg1LjQ1NGgyMzYuMTIzYTguMjExIDguMjExIDAgMSAwIDAtMTYuNDIySDc4LjQ4NWE4LjIxMSA4LjIxMSAwIDEgMCAwIDE2LjQyMnptMC04NS40NTVoMjM2LjEyM2E4LjIxMSA4LjIxMSAwIDEgMCAwLTE2LjQyMkg3OC40ODVhOC4yMTEgOC4yMTEgMCAxIDAgMCAxNi40MjJ6TTQyLjgyOSAyLjcxNmgzMDcuNDM2YTMzLjUyOCAzMy41MjggMCAwIDEgMzMuNDYgMzMuNDYzVjQ3OC41NGEzMy41MTYgMzMuNTE2IDAgMCAxLTMzLjQ2IDMzLjQ2SDQyLjgyOWEzMy41MTkgMzMuNTE5IDAgMCAxLTMzLjQ2MS0zMy40NlYzNi4xNzlBMzMuNTMxIDMzLjUzMSAwIDAgMSA0Mi44MjkgMi43MTZ6IiBvcGFjaXR5PSIxIiBkYXRhLW9yaWdpbmFsPSJ1cmwoI2EpIj48L3BhdGg+PC9nPjwvc3ZnPg==" />
+                                        </a>
+                                        <a class="swtAltDelete">
+                                            <img class="dlt-img" data-bs-toggle="tooltip" title="Delete" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB4PSIwIiB5PSIwIiB2aWV3Qm94PSIwIDAgMzIgMzIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgY2xhc3M9IiI+PGc+PGxpbmVhckdyYWRpZW50IGlkPSJhIiB4MT0iMCIgeDI9IjEiIHkxPSIwIiB5Mj0iMCIgZ3JhZGllbnRUcmFuc2Zvcm09Im1hdHJpeCgyMy4yNDIgMCAwIDI3LjgyMyAzLjg3OSA2NC4wODgpIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHN0b3Agc3RvcC1vcGFjaXR5PSIxIiBzdG9wLWNvbG9yPSIjYjQwMDAxIiBvZmZzZXQ9IjAiPjwvc3RvcD48c3RvcCBzdG9wLW9wYWNpdHk9IjEiIHN0b3AtY29sb3I9IiNlZDNhM2EiIG9mZnNldD0iMSI+PC9zdG9wPjwvbGluZWFyR3JhZGllbnQ+PHBhdGggZmlsbD0idXJsKCNhKSIgZD0ibTEyLjc0NCA1NC4yODktOC44NjUgMi4yMS4yNDIuOTcgMi4zOTYtLjU5Ny44MDIgMTYuODQyQTQuNSA0LjUgMCAwIDAgMTEuODE0IDc4aDguMzcyYTQuNSA0LjUgMCAwIDAgNC40OTUtNC4yODZsLjgxOC0xNy4xOUEuNDk5LjQ5OSAwIDAgMCAyNSA1NkgxMC4wMTVsMTcuMTA2LTQuMjY1LS4yNDItLjk3LTYuNTQ4IDEuNjMyLS45MTUtMS45MzRhLjUuNSAwIDAgMC0uNTczLS4yNzFsLTUuODIxIDEuNDUxYS41LjUgMCAwIDAtLjM3OS41MDl6TTExLjUgNjB2MTNoMVY2MHptNCAwdjEzaDFWNjB6bTQgMHYxM2gxVjYwem0tMy42MzktNi40ODgtMi4xMjguNTMtLjA3Mi0xLjUyOCA1LjAyNy0xLjI1My42NTQgMS4zODN6IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgwIC00OCkiIG9wYWNpdHk9IjEiIGRhdGEtb3JpZ2luYWw9InVybCgjYSkiIGNsYXNzPSIiPjwvcGF0aD48L2c+PC9zdmc+" />
+                                        </a>
+                                    </td> 
+                                </tr>
+                                
+
+                            </tbody>
+                        </table>
+                    </div>
+
+
+                </div> 
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+<footer class="footer">
+    <div class="container-fluid">
+        <nav class="pull-left">
+            &copy;
+            <script type="text/javascript">
+                var today = new Date()
+                var year = today.getFullYear()
+                document.write(year)
+            </script>
+        </nav>
+        <div class="copyright ml-auto">
+            Powered by <a class="text-uppercase" href="https://duffldigital.com/" target="_blank">Duffl
+            Digital</a>
+        </div>
+    </div>
+</footer>
+</div>
+
+<div class="back-to-top" style="display: none;">
+    <a href="#" data-bs-toggle="tooltip" title="Back to Top">
+        <img src="assets/img/back-to-top.png" class="w-50 px-1 d-flex mx-auto">
+    </a>
+</div>
+
+
+</div>
+<!--   Core JS Files   -->
+<script src="assets/js/core/jquery.3.2.1.min.js"></script> 
+<script src="assets/js/core/bootstrap.min.js"></script>
+<!-- Sweet Alert -->
+<script src="assets/js/plugin/sweetalert/sweetalert.min.js"></script>
+
+<script>
+
+
+        //-- menu
+        function updateNavBackground() {
+            document.querySelectorAll('.menu-tab .nav-item').forEach(item => {
+                const link = item.querySelector('.nav-link');
+                if (link.classList.contains('active')) {
+            item.style.backgroundColor = '#2b2e32'; // Apply background for active
+        } else {
+            item.style.backgroundColor = 'transparent'; // Reset background for inactive
+        }
+    });
+        }
+
+// Run function when tab is clicked
+document.querySelectorAll('.menu-tab .nav-link').forEach(link => {
+    link.addEventListener('shown.bs.tab', updateNavBackground); // Bootstrap tab event
+});
+
+// Initial run to set correct background
+updateNavBackground();
+//--// menu
+
+//-- tooltips Back to Top button
+document.addEventListener("DOMContentLoaded", function () {
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+        new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+});
+
+document.addEventListener("scroll", function () {
+    const backToTop = document.querySelector(".back-to-top");
+    if (window.scrollY > 1000) {
+        backToTop.style.display = "block";
+    } else {
+        backToTop.style.display = "none";
+    }
+});
+
+document.querySelector(".back-to-top a").addEventListener("click", function (event) {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
+//--// tooltips Back to Top button
+
+
+//-- view-more-details
+$(document).ready(function() {
+  // When an image with class .moredetails-img is clicked
+  $('.moredetails-img').on('click', function() { 
+    // Then, show the .view-more-details that corresponds to the clicked .moredetails-img
+    $(this).parents("tr").next('.view-more-details').toggle();
+});
+});
+//--// view-more-details
+
+// Select the Delete button with the class 'swtAltDelete'
+const buttons = document.querySelectorAll('.swtAltDelete');
+
+buttons.forEach(function (button) {
+  button.addEventListener('click', function () {
+    Swal.fire({
+      title: 'Are you sure?',
+      text: 'Do you really want to delete this quality reports? This action cannot be undone!',
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#d33', // Red for delete
+      cancelButtonColor: '#3085d6', // Blue for cancel
+      confirmButtonText: 'Yes, Delete It!',
+      cancelButtonText: 'Cancel',
+  }).then((result) => {
+      if (result.isConfirmed) {
+        // Logic to delete the CRM
+        Swal.fire({
+          icon: 'success',
+          title: 'Deleted!',
+          text: 'The quality reports has been deleted successfully.',
+          confirmButtonColor: '#3085d6',
+          confirmButtonText: 'OK',
+      });
+    }
+});
+});
+});
+
+
+</script>
+</body>
+
+</html>

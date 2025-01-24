@@ -1,0 +1,638 @@
+﻿ <%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminKey2h.master.cs" Inherits="adminkey2com_AdminKey2h" %>
+
+    <!DOCTYPE html>
+
+    <html>
+
+    <head runat="server">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Admin Dashboard | KEY2H</title>
+        <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+        <link rel="icon" href="assets/img/fav-icon.png" type="image/x-icon" />
+
+        <!-- Fonts and icons -->
+        <script src="assets/js/plugin/webfont/webfont.min.js"></script>
+        <script>
+            WebFont.load({
+                google: { "families": ["Lato:300,400,700,900"] },
+                custom: { "families": ["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['assets/css/fonts.min.css'] },
+                active: function () {
+                    sessionStorage.fonts = true;
+                }
+            });
+        </script>
+
+        <!-- CSS Files -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/atlantis.min.css">
+        <link rel="stylesheet" href="assets/bootstrap-icons/bootstrap-icons.css">
+        <link rel="stylesheet" href="assets/css/demo.css">
+
+        <asp:ContentPlaceHolder ID="head" runat="server">
+        </asp:ContentPlaceHolder>
+    </head>
+
+    <body>
+        <form id="form1" runat="server">
+
+
+            <div class="wrapper sidebar_minimize">
+                <div class="main-header">
+
+                    <!-- Navbar Header -->
+                    <nav class="navbar navbar-header navbar-expand " data-background-color="white">
+
+                        <div class="container-fluid">
+                            <div class="text-white h5">
+                                <a href="" class="logo" style="cursor:context-menu;">
+                                    <img src="assets/img/logo.png" width="150" alt="navbar brand" class="navbar-brand">
+                                </a>
+                                | <span class="text-white ps-3 ltr-sp">
+                                    <asp:Label ID="lblrole" runat="server" Text=""></asp:Label>
+                                </span>
+                            </div>
+                            <div class="collapse" id="search-nav">
+                                <!-- <form class="navbar-left navbar-form nav-search mr-md-3">
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<button type="submit" class="btn btn-search pr-1">
+										<i class="fa fa-search search-icon"></i>
+									</button>
+								</div>
+								<input type="text" placeholder="Search ..." class="form-control">
+							</div>
+						</form> -->
+                            </div>
+                            <ul class="navbar-nav topbar-nav justify-content-end align-items-center">
+
+                                <%-- <li class="nav-item dropdown hidden-caret">
+                                    <a class="nav-link dropdown-toggle" href="#" id="notifDropdown" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="bi bi-bell-fill"></i>
+                                        <span class="notification">3</span>
+                                    </a>
+                                    <ul class="dropdown-user dropdown-menu dropdown-menu-end notif-box animated fadeIn"
+                                        aria-labelledby="notifDropdown">
+                                        <li>
+                                            <div class="dropdown-title">You have 3 new notification</div>
+                                        </li>
+                                        <li>
+                                            <div class="notif-scroll scrollbar-outer">
+                                                <div class="notif-center">
+                                                    <a href="#">
+                                                        <div class="notif-icon notif-primary">
+                                                            <i class="bi bi-person-fill"></i>
+                                                        </div>
+                                                        <div class="notif-content">
+                                                            <span class="block">2 Follow-ups have been closed
+                                                            </span>
+                                                            <span class="time">5 minutes ago</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#">
+                                                        <div class="notif-icon notif-primary"><i
+                                                                class="bi bi-person-fill"></i></div>
+                                                        <div class="notif-content">
+                                                            <span class="block">4 New leads have been received
+                                                            </span>
+                                                            <span class="time">12 minutes ago</span>
+                                                        </div>
+                                                    </a>
+                                                    <a href="#">
+                                                        <div class="notif-icon notif-primary"><i
+                                                                class="bi bi-person-fill"></i></div>
+                                                        <!-- <div class="notif-img"> 
+													<img src="assets/img/profile2.jpg" alt="Img Profile">
+												</div> -->
+                                                        <div class="notif-content">
+                                                            <span class="block">A lead status has been updated
+                                                            </span>
+                                                            <span class="time">12 minutes ago</span>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    </li>--%>
+
+                                    <li class="nav-item dropdown hidden-caret">
+                                        <a class="dropdown-toggle profile-pic" data-bs-toggle="dropdown" href="#"
+                                            aria-expanded="false">
+                                            <div class="avatar-sm">
+                                                <!-- <i class="fa fa-user"></i> -->
+                                                <img src="assets/img/profile.jpg" alt="img"
+                                                    class="img-fluid rounded-circle profile-img" />
+                                                <!--<i class="bi bi-person-circle"></i>-->
+                                                <!-- <img src="assets/img/user.png" alt="img" class="avatar-img rounded-circle"> -->
+                                            </div>
+                                        </a>
+                                        <ul class="dropdown-user dropdown-menu dropdown-menu-end animated fadeIn">
+                                            <div class="dropdown-user-scroll scrollbar-outer">
+                                                <li>
+                                                    <div class="user-box">
+                                                        <div class="avatar-lg">
+                                                            <img src="assets/img/profile.jpg" alt="image profile"
+                                                                class="avatar-img rounded">
+                                                        </div>
+                                                        <div class="u-text align-content-center">
+                                                            <h4 class="text-capitalize">
+                                                                <asp:Label ID="lblloginusername" runat="server" Text="">
+                                                                </asp:Label>
+                                                            </h4>
+                                                            <p class="text-muted mb-0">
+                                                                <asp:Label ID="lblloginusermailid" runat="server"
+                                                                    Text=""></asp:Label>
+                                                            </p>
+                                                            <!-- <a href="profile.html" class="btn btn-xs btn-secondary btn-sm">View Profile</a> -->
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="dropdown-divider"></div>
+                                                    <%-- <a class="dropdown-item text-center" href="#">Logout</a>--%>
+                                                        <asp:LinkButton ID="lnklogout" class="dropdown-item text-center"
+                                                            OnClick="lnklogout_Click" runat="server">Log Out
+                                                        </asp:LinkButton>
+                                                </li>
+                                            </div>
+                                        </ul>
+                                    </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <!-- End Navbar -->
+                    <div id="dvadminmenu" class="menu-1" style="display: block;">
+
+                        <ul class="menu-tab nav nav-tabs">
+
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="" style="cursor:context-menu;">
+                                    <i class="bi bi-house-door" aria-hidden="true"></i>
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+
+                                <a class="nav-link" id="tabProjects" runat="server" href="#tab1" data-bs-toggle="tab">
+                                    <i class="bi bi-bookmark-star" aria-hidden="true"></i>Projects
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="tabFlatBooking" runat="server" href="#tab2"
+                                    data-bs-toggle="tab">
+                                    <i class="bi bi-building" aria-hidden="true"></i>Flat Booking
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="tabConstructionUpdates" runat="server" href="#tab21"
+                                    data-bs-toggle="tab">
+                                    <i class="bi bi-buildings" aria-hidden="true"></i>Construction Updates
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="tabCust" runat="server" href="#tab3" data-bs-toggle="tab">
+                                    <i class="bi bi-bar-chart-steps" aria-hidden="true"></i> Customization
+                                </a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" id="tabMore" runat="server" href="#tab4" data-bs-toggle="tab">
+                                    <i class="bi bi-ui-checks-grid" aria-hidden="true"></i> More
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content">
+                            <div id="tab1" runat="server">
+                                <!-- Content for Tab 1 -->
+                                <ul class="sub-menu">
+                                    <li id="subMenuAddProject" runat="server">
+                                        <a href="add-project.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            Add Project
+                                        </a>
+                                    </li>
+                                    <li id="subMenuViewProject" runat="server">
+                                        <a href="view-project.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            View Projects
+                                        </a>
+                                    </li>
+                                    <li id="subMenuAddBlock" runat="server">
+                                        <a href="add-block.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            Add Block
+                                        </a>
+                                    </li>
+                                    <li id="subMenuViewBlock" runat="server">
+                                        <a href="view-block.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            View Blocks
+                                        </a>
+                                    </li>
+                                    <li id="subMenuAddFlat" runat="server">
+                                        <a href="add-flat.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            Add Flat
+                                        </a>
+                                    </li>
+                                    <li id="subMenuViewFlat" runat="server">
+                                        <a href="view-flat.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            View Flats
+                                        </a>
+                                    </li>
+                                    <li id="subMenuBulkFlat" runat="server">
+                                        <a href="flatbulkupload.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            Flats Bulk Upload
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="tab2" runat="server">
+                                <ul class="sub-menu">
+                                    <li id="subMenuAddFB" runat="server">
+                                        <a href="add-flat-booking.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            Add Flat Booking
+                                        </a>
+                                    </li>
+                                    <li id="subMenuViewFB" runat="server">
+                                        <a href="view-flat-booking.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            View Flat Booking
+                                        </a>
+                                    </li>
+                                    <li id="subMenuAddCostDetails" runat="server">
+                                        <a href="add-cost-details.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            Add Cost Details
+                                        </a>
+                                    </li>
+                                    <li id="subMenuViewCostDetails" runat="server">
+                                        <a href="view-cost-details.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            View Cost Details
+                                        </a>
+                                    </li>
+                                    <li id="subMenuAddPS" runat="server">
+                                        <a href="add-payment-schedule.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            Add Payment Schedule
+                                        </a>
+                                    </li>
+                                    <li id="subMenuViewPS" runat="server">
+                                        <a href="view-payment-schedule.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            View Payment Schedule
+                                        </a>
+                                    </li>
+                                    <li id="subMenuAddD" runat="server">
+                                        <a href="add-demand.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            Add Demand
+                                        </a>
+                                    </li>
+                                    <li id="subMenuViewD" runat="server">
+                                        <a href="view-demand.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            View Demand
+                                        </a>
+                                    </li>
+                                    <li id="subMenuAddPT" runat="server">
+                                        <a href="add-payment-transaction.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            Add Payment Transaction
+                                        </a>
+                                    </li>
+                                    <li id="subMenuViewPT" runat="server">
+                                        <a href="view-payment-transaction.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            View Payment Transaction
+                                        </a>
+                                    </li>
+                                      <li id="subMenuAddKYC" runat="server">
+                                        <a href="add-kyc-docs.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            Add KYC Docs
+                                        </a>
+                                    </li>
+                                      <li id="subMenuViewKYC" runat="server">
+                                        <a href="view-kyc-docs.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            View KYC Docs
+                                        </a>
+                                    </li>
+                                    
+                                    <li id="subCostPaymentDetails" runat="server">
+                                        <a href="view-CostPaymentDetails.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            Updation Details
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div id="tab21" runat="server">
+                                <ul class="sub-menu">
+                                    <li id="subMenuAddPP" runat="server">
+                                        <a href="add-project-progress.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            Add Project Progress
+                                        </a>
+                                    </li>
+                                    <li id="subMenuViewPP" runat="server">
+                                        <a href="view-project-progress.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            View Project Progress
+                                        </a>
+                                    </li>
+                                    <li id="subMenuAddFPro" runat="server">
+                                        <a href="add-flat-progress.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            Add Flat Progress
+                                        </a>
+                                    </li>
+                                    <li id="subMenuViewFPro" runat="server">
+                                        <a href="view-flat-progress.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            View Flat Progress
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div runat="server" id="tab3">
+                                <ul class="sub-menu">
+                                    <li id="subMenuAddCW" runat="server">
+                                        <a href="add-customization-work.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            Add Customization Work
+                                        </a>
+                                    </li>
+                                    <li id="subMenuViewCW" runat="server">
+                                        <a href="view-customization-work.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            View Customization Work
+                                        </a>
+                                    </li>
+                                    <li id="subMenuAddCD" runat="server">
+                                        <a href="add-customization-demand.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            Add Customization Demand
+                                        </a>
+                                    </li>
+                                    <li id="subMenuViewCD" runat="server">
+                                        <a href="view-customization-demand.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            View Customization Demand
+                                        </a>
+                                    </li>
+                                    <li id="subMenuAddCT" runat="server">
+                                        <a href="add-customization-transaction.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            Add Customization Transaction
+                                        </a>
+                                    </li>
+                                    <li id="subMenuViewCT" runat="server">
+                                        <a href="view-customization-transaction.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            View Customization Transaction
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div runat="server" id="tab4">
+                                <ul class="sub-menu">
+                                    <li id="subMenuLS" runat="server">
+                                        <a href="lead-source.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            Lead Source
+                                        </a>
+                                    </li>
+                                    <li id="subMenuAddRM" runat="server">
+                                        <a href="add-rm.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            Add RM
+                                        </a>
+                                    </li>
+                                    <li id="subMenuViewRM" runat="server">
+                                        <a href="view-rm.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            View RM
+                                        </a>
+                                    </li>
+                                    <li id="subMenuAddUser" runat="server">
+                                        <a href="add-user.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            Add User
+                                        </a>
+                                    </li>
+                                    <li id="subMenuViewUser" runat="server">
+                                        <a href="view-users.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            View User
+                                        </a>
+                                    </li>
+                                    <li id="subMenuAddRC" runat="server">
+                                        <a href="add-refer-content.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            Add Refer Content
+                                        </a>
+                                    </li>
+                                    <li id="subMenuViewRC" runat="server">
+                                        <a href="view-refer-content.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            View Refer Content
+                                        </a>
+                                    </li>
+                                    <li id="subMenuReflist" runat="server">
+                                        <a href="referral-list.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            Referral List
+                                        </a>
+                                    </li>
+                                    <li id="subMenuAddWH" runat="server">
+                                        <a href="add-whats-happening.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            Add What's Happening
+                                        </a>
+                                    </li>
+                                    <li id="subMenuViewWH" runat="server">
+                                        <a href="view-whats-happening.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            View What's Happening
+                                        </a>
+                                    </li>
+                                    <li id="subMenuAddSpec" runat="server">
+                                        <a href="add-specifications.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            Add Specifications
+                                        </a>
+                                    </li>
+                                    <li id="subMenuViewSpec" runat="server">
+                                        <a href="view-specifications.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            View Specifications
+                                        </a>
+                                    </li>
+                                    <li id="subMenuAddFP" runat="server">
+                                        <a href="add-floor-plan.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            Add Floor Plan
+                                        </a>
+                                    </li>
+                                    <li id="subMenuViewFP" runat="server">
+                                        <a href="view-floor-plan.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            View Floor Plan
+                                        </a>
+                                    </li>
+                                    <li id="subMenuAddBB" runat="server">
+                                        <a href="add-broadcast.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            Add Broadcast
+                                        </a>
+                                    </li>
+                                    <li id="subMenuViewBB" runat="server">
+                                        <a href="view-broadcast.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            View Broadcast
+                                        </a>
+                                    </li>
+                                    <li id="subMenuAddNoti" runat="server">
+                                        <a href="add-notification.aspx">
+                                            <i class="bi bi-kanban" aria-hidden="true"></i>
+                                            Customer Notification
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="main-panel">
+                    <asp:ScriptManager ID="ScriptManager1" EnableCdn="true" EnablePartialRendering="true"
+                        runat="server"></asp:ScriptManager>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+
+                <div class="back-to-top" style="display: none;">
+                    <a href="#" data-bs-toggle="tooltip" title="Back to Top">
+                        <img src="assets/img/back-to-top.png" class="w-50 px-1 d-flex mx-auto">
+                    </a>
+                </div>
+            </div>
+
+
+            <!--   Core JS Files   -->
+            <script src="assets/js/core/jquery.3.2.1.min.js"></script>
+            <script src="assets/js/core/bootstrap.min.js"></script>
+            <!-- Sweet Alert -->
+            <script src="assets/js/plugin/sweetalert/sweetalert.min.js"></script>
+
+            <script>
+                document.addEventListener("DOMContentLoaded", function () {
+                    // Assuming you set the 'active' class via C# on page load for main menu
+                    const activeTab = document.querySelector('.nav-link.active'); // Find the active tab
+                    if (activeTab) {
+                        const activeTabId = activeTab.getAttribute('href'); // Get the href (which is the tab id)
+                        const activeTabPane = document.querySelector(activeTabId); // Get the tab content based on href
+                        if (activeTabPane) {
+                            const tab = new bootstrap.Tab(activeTab); // Initialize the tab using Bootstrap API
+                            tab.show();  // Activate the tab dynamically (show the tab)
+                        }
+                    }
+
+                    // Handling sub-menu visibility (if needed on page load)
+                    const activeSubMenu = document.querySelector('.sub-menu .active'); // Find the active sub-menu link
+                    if (activeSubMenu) {
+                        const subMenu = activeSubMenu.closest('ul.sub-menu'); // Get the closest <ul> of the active sub-menu
+                        if (subMenu) {
+                            subMenu.style.display = 'block'; // Ensure the sub-menu is visible
+                        }
+                    }
+                });
+
+            </script>
+
+
+            <script>
+
+
+                //-- tooltips Back to Top button
+                document.addEventListener("DOMContentLoaded", function () {
+                    initializeTooltips();
+
+                    // Ensure tooltips are initialized after AJAX postbacks as well
+                    Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+                        initializeTooltips();
+                    });
+                });
+
+                function initializeTooltips() {
+                    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+                    tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+                        new bootstrap.Tooltip(tooltipTriggerEl);
+                    });
+                }
+
+
+                document.addEventListener("scroll", function () {
+                    const backToTop = document.querySelector(".back-to-top");
+                    if (window.scrollY > 1000) {
+                        backToTop.style.display = "block";
+                    } else {
+                        backToTop.style.display = "none";
+                    }
+                });
+
+                document.querySelector(".back-to-top a").addEventListener("click", function (event) {
+                    event.preventDefault();
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                });
+                //--// tooltips Back to Top button
+
+
+                // Select all textboxes with the class 'capitalize-input'
+                document.addEventListener("DOMContentLoaded", function () {
+                    function attachCapitalizationEvents() {
+                        var textboxes = document.querySelectorAll('.capitalize-input');
+                        textboxes.forEach(function (textbox) {
+                            textbox.removeEventListener("input", capitalizeInput); // Remove existing listener to avoid duplicates
+                            textbox.addEventListener("input", capitalizeInput);
+                        });
+                    }
+
+                    function capitalizeInput() {
+                        if (this.value.length > 0) {
+                            this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1);
+                        }
+                    }
+
+
+                    // Attach events on initial load
+                    attachCapitalizationEvents();
+
+                    // Reattach events after partial postback
+                    if (typeof Sys !== "undefined" && Sys.WebForms && Sys.WebForms.PageRequestManager) {
+                        var prm = Sys.WebForms.PageRequestManager.getInstance();
+                        prm.add_endRequest(function () {
+                            attachCapitalizationEvents(); // Reattach event listeners after UpdatePanel refresh
+                        });
+                    }
+                });
+
+            </script>
+
+        </form>
+    </body>
+
+    </html>

@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title> Admin Dashboard | KEY2H</title>
+    <meta content='width=device-width, initial-scale=1.0, shrink-to-fit=no' name='viewport' />
+    <link rel="icon" href="assets/img/fav-icon.png" type="image/x-icon" />
+
+    <!-- Fonts and icons -->
+    <script src="assets/js/plugin/webfont/webfont.min.js"></script>
+    <script>
+        WebFont.load({
+            google: { "families": ["Lato:300,400,700,900"] },
+            custom: { "families": ["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['assets/css/fonts.min.css'] },
+            active: function () {
+                sessionStorage.fonts = true;
+            }
+        });
+    </script>
+
+    <!-- FontAwesome (for icons) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/atlantis.min.css"> 
+    <link rel="stylesheet" href="assets/bootstrap-icons/bootstrap-icons.css"> 
+    <link rel="stylesheet" href="assets/css/demo.css">
+    
+</head>
+
+</style>
+
+<body>
+    <div class="wrapper sidebar_minimize">
+        <div class="main-header">
+
+            <!-- Navbar Header -->
+            <nav class="navbar navbar-header navbar-expand-lg" data-background-color="white">
+
+                <div class="container-fluid">
+                    <div>
+
+                        <a href="dashboard.html" class="logo">
+                            <img src="assets/img/logo.png" width="150" alt="navbar brand" class="navbar-brand">
+                        </a>
+                    </div>
+                    <div class="collapse" id="search-nav">
+                        <!-- <form class="navbar-left navbar-form nav-search mr-md-3">
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<button type="submit" class="btn btn-search pr-1">
+										<i class="fa fa-search search-icon"></i>
+									</button>
+								</div>
+								<input type="text" placeholder="Search ..." class="form-control">
+							</div>
+						</form> -->
+                    </div>
+                    <ul class="navbar-nav topbar-nav ml-md-auto align-items-center">
+                        <li class="nav-item toggle-nav-search hidden-caret">
+                            <a class="nav-link" data-toggle="collapse" href="#search-nav" role="button"
+                            aria-expanded="false" aria-controls="search-nav">
+                            <i class="fa fa-search"></i>
+                        </a>
+                    </li>
+
+                    <li class="nav-item dropdown hidden-caret">
+                        <a class="nav-link dropdown-toggle" href="#" id="notifDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="fa fa-bell"></i>
+                        <span class="notification">3</span>
+                    </a>
+                    <ul class="dropdown-menu notif-box animated fadeIn" aria-labelledby="notifDropdown">
+                        <li>
+                            <div class="dropdown-title">You have 3 new notification</div>
+                        </li>
+                        <li>
+                            <div class="notif-scroll scrollbar-outer">
+                                <div class="notif-center">
+                                    <a href="#">
+                                        <div class="notif-icon notif-primary"> <i class="fa fa-user"></i>
+                                        </div>
+                                        <div class="notif-content">
+                                            <span class="block">
+                                                2 Follow-ups have been closed
+                                            </span>
+                                            <span class="time">5 minutes ago</span>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="notif-icon notif-primary"> <i class="fa fa-user"></i></div>
+                                        <div class="notif-content">
+                                            <span class="block">
+                                                4 New leads have been received
+                                            </span>
+                                            <span class="time">12 minutes ago</span>
+                                        </div>
+                                    </a>
+                                    <a href="#">
+                                        <div class="notif-icon notif-primary"> <i class="fa fa-user"></i></div>
+                                                <!-- <div class="notif-img"> 
+													<img src="assets/img/profile2.jpg" alt="Img Profile">
+												</div> -->
+                                                <div class="notif-content">
+                                                    <span class="block">
+                                                        A lead status has been updated
+                                                    </span>
+                                                    <span class="time">12 minutes ago</span>
+                                                </div>
+                                            </a> 
+                                        </div>
+                                    </div>
+                                </li> 
+                            </ul>
+                        </li>
+
+                        <li class="nav-item dropdown hidden-caret">
+                            <a class="dropdown-toggle profile-pic" data-bs-toggle="dropdown" href="#" aria-expanded="false">
+                                <div class="avatar-sm">
+                                    <i class="fa fa-user"></i>
+                                    <!-- <img src="assets/img/user.png" alt="img" class="avatar-img rounded-circle"> -->
+                                </div>
+                            </a>
+                            <ul class="dropdown-user dropdown-menu dropdown-menu-end animated fadeIn">
+                                <div class="dropdown-user-scroll scrollbar-outer">
+                                    <li>
+                                        <div class="user-box">
+                                            <div class="avatar-lg"><img src="assets/img/user.png" alt="image profile"
+                                                class="avatar-img rounded"></div>
+                                                <div class="u-text">
+                                                    <h4>XXXXX</h4>
+                                                    <p class="text-muted">xxxx@gmail.com</p>
+                                                    <!-- <a href="profile.html" class="btn btn-xs btn-secondary btn-sm">View Profile</a> -->
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="dropdown-divider"></div> 
+                                            <a class="dropdown-item text-center" href="#">Logout</a>
+                                        </li>
+                                    </div>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- End Navbar -->
+                <div id="dvadminmenu" class="menu-1" style="display:block;">
+                    <div class="menu-tab nav nav-tabs">
+                        <li class="nav-item">
+                            <a class="nav-link " data-bs-toggle="tab" href="#tab-1">
+                                <i class="fa fa-home" aria-hidden="true"></i> Projects
+                            </a>
+                        </li>
+                        <li class="nav-item submenu">
+                            <a class="nav-link active " data-bs-toggle="tab" href="#tab-2">
+                                <i class="fa fa-users" aria-hidden="true"></i> Blocks
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#tab-3">
+                                <i class="fa fa-building-o" aria-hidden="true"></i> Flats
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#tab-4">
+                                <i class="fa fa-money" aria-hidden="true"></i> Customers
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#tab-5">
+                                <i class="fa fa-bar-chart" aria-hidden="true"></i> Flat Customization
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-bs-toggle="tab" href="#tab-6">
+                                <i class="fa fa-line-chart" aria-hidden="true"></i> Reports
+                            </a>
+                        </li>
+                    <!-- <a href="https://duffldemo.in/Metroconnect/Dashboard.aspx"
+                        style="position: absolute; right: 15px; top: 31%; color: #fff; text-decoration: none; text-transform: uppercase; letter-spacing: .5px;">
+                        Home
+                    </a> -->
+                </div>
+                
+                <div class="tab-content">
+                    <div class="tab-pane fade" id="tab-1">
+                        <!-- Content for Tab 1 -->
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="add-project.html">
+                                    <i class="fa fa-line-chart" aria-hidden="true"></i> 
+                                    Add Projects
+                                </a>
+                            </li> 
+                            <li>
+                                <a href="view-project.html">
+                                    <i class="fa fa-line-chart" aria-hidden="true"></i> 
+                                    View Projects
+                                </a>
+                            </li> 
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade show active" id="tab-2">
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="add-block.html">
+                                    <i class="fa fa-line-chart" aria-hidden="true"></i> 
+                                    Add Blocks
+                                </a>
+                            </li> 
+                            <li>
+                                <a href="view-block.html">
+                                    <i class="fa fa-line-chart" aria-hidden="true"></i> 
+                                    View Blocks
+                                </a>
+                            </li> 
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="tab-3">
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="add-flat.html">
+                                    <i class="fa fa-line-chart" aria-hidden="true"></i> 
+                                    Add Flats
+                                </a>
+                            </li> 
+                            <li>
+                                <a href="view-flat.html">
+                                    <i class="fa fa-line-chart" aria-hidden="true"></i> 
+                                    View Flats
+                                </a>
+                            </li> 
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="tab-4">
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="add-customer.html">
+                                    <i class="fa fa-line-chart" aria-hidden="true"></i> 
+                                    Add Customers
+                                </a>
+                            </li> 
+                            <li>
+                                <a href="view-customer.html">
+                                    <i class="fa fa-line-chart" aria-hidden="true"></i> 
+                                    View Customers
+                                </a>
+                            </li> 
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="tab-5">
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="">
+                                    <i class="fa fa-line-chart" aria-hidden="true"></i> 
+                                    Add Flat
+                                </a>
+                            </li>   
+                        </ul>
+                    </div>
+                    <div class="tab-pane fade" id="tab-6">
+                        <ul class="sub-menu">
+                            <li>
+                                <a href="">
+                                    <i class="fa fa-line-chart" aria-hidden="true"></i> 
+                                    Add Report
+                                </a>
+                            </li>   
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+
+        <div class="main-panel"> 
+            <div class="content">
+                <div class="panel-header bg-primary-gradient">
+                    <div class="page-inner py-5">
+                        <div class="d-flex pb-2 align-items-left align-items-sm-center flex-column flex-sm-row justify-content-between">
+                            <div class="d-flex">
+                                <h2 class="text-white mb-0 fw-bold text-uppercase">Add Quality Reports</h2>
+                                <ul class="breadcrumbs">
+                                    <li class="nav-home pt-1">
+                                        <a href="dashboard.html">
+                                            <i class="fa fa-home"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="text-end">
+                                <a href="view-quality-reports.html" data-bs-toggle="tooltip" title="View page">
+                                    <img class="add-view-img" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB4PSIwIiB5PSIwIiB2aWV3Qm94PSIwIDAgMzIgMzIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiIGNsYXNzPSIiPjxnPjxnIGZpbGw9IiM2NjIxYmEiPjxwYXRoIGQ9Ik0yNS41MyAyMS41MzVhLjkuOSAwIDAgMC0uOS45di41NGMwIC42MDYtLjQ5NCAxLjEtMS4xIDEuMUg4LjE1Yy0uNjA2IDAtMS4xLS40OTQtMS4xLTEuMXYtMTguMWMwLS42MDYuNDk0LTEuMSAxLjEtMS4xaDE1LjM4Yy42MDYgMCAxLjEuNDk0IDEuMSAxLjF2Mi44YS45LjkgMCAwIDAgMS44IDB2LTIuOGMwLTEuNTk5LTEuMzAxLTIuOS0yLjktMi45SDguMTVhMi45MDMgMi45MDMgMCAwIDAtMi45IDIuOXYxLjI0NEg0YTIuOTAzIDIuOTAzIDAgMCAwLTIuOSAyLjl2MTguMTA2YzAgMS41OTkgMS4zMDEgMi45IDIuOSAyLjloMTUuMzc4YzEuNTk5IDAgMi45LTEuMzAxIDIuOS0yLjl2LTEuMjVoMS4yNTJjMS41OTkgMCAyLjktMS4zMDEgMi45LTIuOXYtLjU0YS45LjkgMCAwIDAtLjktLjl6bS01LjA1MiA1LjU5YzAgLjYwNi0uNDk0IDEuMS0xLjEgMS4xSDRjLS42MDYgMC0xLjEtLjQ5NC0xLjEtMS4xVjkuMDE5YzAtLjYwNi40OTQtMS4xIDEuMS0xLjFoMS4yNXYxNS4wNTdjMCAxLjU5OSAxLjMwMSAyLjkgMi45IDIuOWgxMi4zMjh6IiBmaWxsPSIjNjYyMWJhIiBvcGFjaXR5PSIxIiBkYXRhLW9yaWdpbmFsPSIjNjYyMWJhIiBjbGFzcz0iIj48L3BhdGg+PHBhdGggZD0iTTEzLjUgNy41ODFoLTIuMzQzYS45LjkgMCAwIDAgMCAxLjhIMTMuNWEuOS45IDAgMCAwIDAtMS44ek0xOC42NCAxMi4xMTVhLjkuOSAwIDAgMC0uOS0uOWgtNi41OGEuOS45IDAgMCAwIDAgMS44aDYuNThhLjkuOSAwIDAgMCAuOS0uOXpNMTEuMTYgMTQuODQ1YS45LjkgMCAwIDAgMCAxLjhoNmEuOS45IDAgMCAwIDAtMS44ek0xMS4xNiAyMC4yNzVoNy4zNmEuOS45IDAgMCAwIDAtMS44aC03LjM2YS45LjkgMCAwIDAgMCAxLjh6IiBmaWxsPSIjNjYyMWJhIiBvcGFjaXR5PSIxIiBkYXRhLW9yaWdpbmFsPSIjNjYyMWJhIiBjbGFzcz0iIj48L3BhdGg+PC9nPjxwYXRoIGZpbGw9IiNmOThhMTciIGQ9Im0zMC42MzYgMTkuODM5LTIuMDU1LTIuMDU1YzEuMjg5LTEuODg4IDEuMTAzLTQuNDg5LS41NzItNi4xNjNhNC44NiA0Ljg2IDAgMCAwLTYuODY0IDAgNC44NTkgNC44NTkgMCAwIDAgMCA2Ljg2MyA0Ljg0OCA0Ljg0OCAwIDAgMCA2LjE2My41NzJsMi4wNTQgMi4wNTRhLjg5Ny44OTcgMCAwIDAgMS4yNzIgMCAuODk1Ljg5NSAwIDAgMCAuMDAyLTEuMjcxem0tOC4yMTctMi42MjdhMy4wNTggMy4wNTggMCAwIDEgMC00LjMxOGMuNTk1LS41OTUgMS4zNzctLjg5MyAyLjE1OS0uODkzczEuNTY0LjI5OCAyLjE1OS44OTNhMy4wNTggMy4wNTggMCAwIDEgMCA0LjMxOGMtMS4xNTMgMS4xNTQtMy4xNjUgMS4xNTQtNC4zMTggMHoiIG9wYWNpdHk9IjEiIGRhdGEtb3JpZ2luYWw9IiNmOThhMTciIGNsYXNzPSIiPjwvcGF0aD48L2c+PC9zdmc+" />
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="page-inner mt--5">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="form-group">
+                                        <div class="form-border margin-top20">
+                                            <div class="form-title">
+                                                <h3>Quality Reports Details</h3>
+                                            </div>
+
+                                            <div class="row mx-0 margin-top20 mb-4">
+                                                <div class="col-md-4 pt-3">
+                                                    <div class="input-icon input-icon-sm right">
+                                                        <label>Project Name <span class="text-danger">*</span></label>
+                                                        <i class="bi bi-journal-bookmark-fill b5-icon"></i>
+                                                        <select class="bs-select form-control input-sm">
+                                                            <option></option>
+                                                            <option>Project 1</option>
+                                                            <option>Project 2</option>
+                                                            <option>Project 3</option>
+                                                            <option>Project 4</option>
+                                                            <option>Project 5</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8 pt-3">
+                                                    <div class="input-icon input-icon-sm right">
+                                                        <label>Display Status <span class="text-danger">*</span></label> 
+                                                        <div class="toggle-container">
+                                                            <div class="toggle-switch">
+                                                                <input type="checkbox" checked id="toggleActiveInactive">
+                                                                <label for="toggleActiveInactive" class="toggle-label mt-1">
+                                                                    <span class="toggle-text-active">Active</span>
+                                                                    <span class="toggle-text-inactive">Inactive</span>
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4 pt-3">
+                                                    <div class="input-icon input-icon-sm right">
+                                                        <label>Title <span class="text-danger">*</span></label>
+                                                        <i class="bi bi-stack-overflow b5-icon"></i>
+                                                        <input type="text" class="form-control input-sm specificationName" />
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-4 pt-3">
+                                                    <div class="input-icon input-icon-sm right">
+                                                        <label>Document Upload <span class="text-danger">*</span></label>
+                                                        <i class="bi bi-file-earmark-text b5-icon"></i>
+                                                        <input type="file" class="documentName form-control input-sm"> 
+                                                    </div>
+                                                </div>
+
+                                                
+
+                                                <div class="col-md-2 pt-4 mt-3">
+                                                    <div class="btn addSpecificationRow pb-0"  data-bs-toggle="tooltip" title="Add Quality Reports" >
+                                                        <img class="add-spec" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB4PSIwIiB5PSIwIiB2aWV3Qm94PSIwIDAgMjQgMjQiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxwYXRoIGZpbGw9IiMyMTk2ZjMiIGQ9Ik0xNC4yNSAzSDIuNzVDMS4yMyAzIDAgNC4yMyAwIDUuNzV2MTIuNUMwIDE5Ljc3IDEuMjMgMjEgMi43NSAyMWg2LjU5YTguNzMxIDguNzMxIDAgMCAxLS44NC0zLjc1bC4wMS0uMjVIMy43NWMtLjQxIDAtLjc1LS4zNC0uNzUtLjc1cy4zNC0uNzUuNzUtLjc1aDQuOTNjLjEyLS42MS4zMS0xLjIuNTUtMS43NUgzLjc1Yy0uNDEgMC0uNzUtLjM0LS43NS0uNzVzLjM0LS43NS43NS0uNzVoNi4zM2MuNDUtLjY1IDEtMS4yNCAxLjYxLTEuNzVIMy43NWMtLjQxIDAtLjc1LS4zNC0uNzUtLjc1UzMuMzQgOSAzLjc1IDloOS41Yy4yMSAwIC4zOS4wOC41My4yMi45OS0uNDMgMi4wOC0uNjggMy4yMi0uNzFWNS43NUMxNyA0LjIzIDE1Ljc3IDMgMTQuMjUgM3oiIG9wYWNpdHk9IjEiIGRhdGEtb3JpZ2luYWw9IiMyMTk2ZjMiPjwvcGF0aD48cGF0aCBmaWxsPSIjMTk3NmQyIiBkPSJNMTIuMjUgMmgtMS4xQzEwLjgyLjg1IDkuNzYgMCA4LjUgMFM2LjE4Ljg1IDUuODUgMmgtMS4xYy0uNDEgMC0uNzUuMzQtLjc1Ljc1djJjMCAuOTYuNzkgMS43NSAxLjc1IDEuNzVoNS41Yy45NiAwIDEuNzUtLjc5IDEuNzUtMS43NXYtMmMwLS40MS0uMzQtLjc1LS43NS0uNzV6IiBvcGFjaXR5PSIxIiBkYXRhLW9yaWdpbmFsPSIjMTk3NmQyIj48L3BhdGg+PGcgZmlsbD0iI2ZmZiI+PHBhdGggZD0iTTEzLjc4IDkuMjJjLS43Ni4zMy0xLjQ2Ljc2MS0yLjA5IDEuMjhIMy43NWMtLjQxIDAtLjc1LS4zNC0uNzUtLjc1UzMuMzQgOSAzLjc1IDloOS41Yy4yMSAwIC4zOS4wOC41My4yMnpNMTAuMDggMTIuMjVjLS4zMy40Ny0uNjIuOTctLjg1IDEuNUgzLjc1Yy0uNDEgMC0uNzUtLjM0LS43NS0uNzVzLjM0LS43NS43NS0uNzV6TTguNjggMTUuNWMtLjEuNDktLjE2Ljk5LS4xNyAxLjVIMy43NWMtLjQxIDAtLjc1LS4zNC0uNzUtLjc1cy4zNC0uNzUuNzUtLjc1eiIgZmlsbD0iI2ZmZmZmZiIgb3BhY2l0eT0iMSIgZGF0YS1vcmlnaW5hbD0iI2ZmZmZmZiI+PC9wYXRoPjwvZz48cGF0aCBmaWxsPSIjMWQ4M2Q0IiBkPSJNNCAzSDIuNzVDMS4yMyAzIDAgNC4yMyAwIDUuNzV2MTIuNUMwIDE5Ljc3IDEuMjMgMjEgMi43NSAyMWg1LjY0di00SDMuNzVjLS40MSAwLS43NS0uMzQtLjc1LS43NXMuMzQtLjc1Ljc1LS43NWg0LjY0di0xLjc1SDMuNzVjLS40MSAwLS43NS0uMzQtLjc1LS43NXMuMzQtLjc1Ljc1LS43NWg0LjY0VjEwLjVIMy43NWMtLjQxIDAtLjc1LS4zNC0uNzUtLjc1UzMuMzQgOSAzLjc1IDloNC42NFY2LjVINS43NUM0Ljc5IDYuNSA0IDUuNzEgNCA0Ljc1eiIgb3BhY2l0eT0iMSIgZGF0YS1vcmlnaW5hbD0iIzFkODNkNCI+PC9wYXRoPjxwYXRoIGZpbGw9IiMxNjY3YjciIGQ9Ik04LjM5LjAwMkEyLjc2NCAyLjc2NCAwIDAgMCA1Ljg1IDJoLTEuMWMtLjQxIDAtLjc1LjM0LS43NS43NXYyYzAgLjk2Ljc5IDEuNzUgMS43NSAxLjc1aDIuNjR6IiBvcGFjaXR5PSIxIiBkYXRhLW9yaWdpbmFsPSIjMTY2N2I3Ij48L3BhdGg+PHBhdGggZmlsbD0iI2RlZGVkZSIgZD0iTTguMzkgOUgzLjc1Yy0uNDEgMC0uNzUuMzQtLjc1Ljc1cy4zNC43NS43NS43NWg0LjY0ek04LjM5IDEyLjI1SDMuNzVjLS40MSAwLS43NS4zNC0uNzUuNzVzLjM0Ljc1Ljc1Ljc1aDQuNjR6TTguMzkgMTUuNUgzLjc1Yy0uNDEgMC0uNzUuMzQtLjc1Ljc1cy4zNC43NS43NS43NWg0LjY0eiIgb3BhY2l0eT0iMSIgZGF0YS1vcmlnaW5hbD0iI2RlZGVkZSI+PC9wYXRoPjxwYXRoIGZpbGw9IiM0Y2FmNTAiIGQ9Ik0xNy4yNSAyNGMtMy43MjIgMC02Ljc1LTMuMDI3LTYuNzUtNi43NXMzLjAyOC02Ljc1IDYuNzUtNi43NVMyNCAxMy41MjcgMjQgMTcuMjUgMjAuOTcyIDI0IDE3LjI1IDI0eiIgb3BhY2l0eT0iMSIgZGF0YS1vcmlnaW5hbD0iIzRjYWY1MCI+PC9wYXRoPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik0xNy4yNSAyMWExIDEgMCAwIDEtMS0xdi01LjVhMSAxIDAgMSAxIDIgMFYyMGExIDEgMCAwIDEtMSAxeiIgb3BhY2l0eT0iMSIgZGF0YS1vcmlnaW5hbD0iI2ZmZmZmZiI+PC9wYXRoPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Ik0yMCAxOC4yNWgtNS41YTEgMSAwIDEgMSAwLTJIMjBhMSAxIDAgMSAxIDAgMnoiIG9wYWNpdHk9IjEiIGRhdGEtb3JpZ2luYWw9IiNmZmZmZmYiPjwvcGF0aD48cGF0aCBmaWxsPSIjNDI5ODQ2IiBkPSJNMTcuMjUgMTAuNWMtMy43MjIgMC02Ljc1IDMuMDI3LTYuNzUgNi43NVMxMy41MjggMjQgMTcuMjUgMjR2LTNhMSAxIDAgMCAxLTEtMXYtMS43NUgxNC41YTEgMSAwIDEgMSAwLTJoMS43NVYxNC41YTEgMSAwIDAgMSAxLTF6IiBvcGFjaXR5PSIxIiBkYXRhLW9yaWdpbmFsPSIjNDI5ODQ2Ij48L3BhdGg+PHBhdGggZmlsbD0iI2RlZGVkZSIgZD0iTTE3LjI1IDE4LjI1aC0xVjIwYTEgMSAwIDAgMCAxIDF6bTAtNC43NWExIDEgMCAwIDAtMSAxdjEuNzVoMXpNMTcuMjUgMTYuMjVIMTQuNWExIDEgMCAxIDAgMCAyaDIuNzV6IiBvcGFjaXR5PSIxIiBkYXRhLW9yaWdpbmFsPSIjZGVkZWRlIj48L3BhdGg+PC9nPjwvc3ZnPg==">
+                                                    </div>
+                                                </div>
+
+                                                <div class="specificationRows"></div> <!-- Placeholder for dynamically added rows -->
+
+                                                
+                                                
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    
+                                </div>
+                                <div class="card-footer">
+                                    <div class="d-flex justify-content-center">
+                                        <input type="button" class="btn btn-sm btn-success me-1 swtAltSubmit" value="Submit">
+                                        <button type="button" class="btn btn-secondary btn-sm me-1"><i class='fa fa-spinner fa-spin'></i> Please wait</button>
+                                        <button class="btn btn-sm btn-danger swtAltCancel">Cancel</button>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+            <footer class="footer">
+                <div class="container-fluid">
+                    <nav class="pull-left">
+                        &copy;
+                        <script type="text/javascript">
+                            var today = new Date()
+                            var year = today.getFullYear()
+                            document.write(year)
+                        </script>
+                    </nav>
+                    <div class="copyright ml-auto">
+                        Powered by <a class="text-uppercase" href="https://duffldigital.com/" target="_blank">Duffl
+                        Digital</a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+        <div class="back-to-top" style="display: none;">
+            <a href="#" data-bs-toggle="tooltip" title="Back to Top">
+                <img src="assets/img/back-to-top.png" class="w-50 px-1 d-flex mx-auto">
+            </a>
+        </div>
+        
+        
+    </div>
+    <!--   Core JS Files   -->
+    <script src="assets/js/core/jquery.3.2.1.min.js"></script> 
+    <script src="assets/js/core/bootstrap.min.js"></script>
+    <!-- Sweet Alert -->
+    <script src="assets/js/plugin/sweetalert/sweetalert.min.js"></script> 
+    
+    <script> 
+
+        //-- menu
+        function updateNavBackground() {
+            document.querySelectorAll('.menu-tab .nav-item').forEach(item => {
+                const link = item.querySelector('.nav-link');
+                if (link.classList.contains('active')) {
+            item.style.backgroundColor = '#2b2e32'; // Apply background for active
+        } else {
+            item.style.backgroundColor = 'transparent'; // Reset background for inactive
+        }
+    });
+        }
+
+// Run function when tab is clicked
+document.querySelectorAll('.menu-tab .nav-link').forEach(link => {
+    link.addEventListener('shown.bs.tab', updateNavBackground); // Bootstrap tab event
+});
+
+// Initial run to set correct background
+updateNavBackground();
+//--// menu
+
+//-- tooltips Back to Top button
+document.addEventListener("DOMContentLoaded", function () {
+    const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+        new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+});
+
+document.addEventListener("scroll", function () {
+    const backToTop = document.querySelector(".back-to-top");
+    if (window.scrollY > 1000) {
+        backToTop.style.display = "block";
+    } else {
+        backToTop.style.display = "none";
+    }
+});
+
+document.querySelector(".back-to-top a").addEventListener("click", function (event) {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
+//--// tooltips Back to Top button
+
+
+    //-- Select the Submit button with the class 'swtAltSubmit'
+    const buttons = document.querySelectorAll('.swtAltSubmit');
+    
+    buttons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            Swal.fire({
+                icon: 'success',
+                title: 'Quality Reports Details Added Successfully',
+                text: 'Your quality reports details have been successfully added!',
+                confirmButtonColor: '#3085d6',
+                confirmButtonText: 'OK'
+            });
+        });
+    });
+    //--// Select the Submit button with the class 'swtAltSubmit'
+
+ //-- Select the Cancel button with the class 'swtAltCancel'
+ const cancelButton = document.querySelector('.swtAltCancel');
+ 
+ cancelButton.addEventListener('click', function() {
+    Swal.fire({
+        icon: 'warning',
+        title: 'Are you sure?',
+        text: 'You are about to cancel the quality reports details submission.',
+        showCancelButton: true,
+        confirmButtonColor: '#d33',
+        cancelButtonColor: '#3085d6',
+        confirmButtonText: 'Yes, Cancel it!',
+        cancelButtonText: 'No, Keep it'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            Swal.fire(
+                'Cancelled!',
+                'Your action has been canceled.',
+                'success'
+                );
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            Swal.fire(
+                'Cancelled',
+                'You can continue with your quality reports details submission.',
+                'info'
+                );
+        }
+    });
+});
+ //--// Select the Cancel button with the class 'swtAltCancel'
+
+ //-- dynamically adding specification rows
+ document.querySelector('.addSpecificationRow').addEventListener('click', function () {
+    const specificationName = document.querySelector('.specificationName').value.trim();
+    const fileInput = document.querySelector('.documentName');
+    const file = fileInput.files[0];
+
+    if (specificationName && file) {
+        // Create the new specification row
+        const specificationRow = document.createElement('div');
+        specificationRow.classList.add('row', 'pt-2');
+        specificationRow.style.position = 'relative';
+
+        specificationRow.innerHTML = `
+        <div class="col-md-4 pt-3">
+        <input type="text" class="form-control input-sm" value="${specificationName}" readonly />
+        </div>
+        <div class="col-md-4 pt-3">
+        <input type="text" class="form-control input-sm" value="${file.name}" readonly />
+        </div>
+        <div class="col-md-2 pt-2">
+        <div class="remove-specification btn" data-bs-toggle="tooltip" title="Remove Quality Reports">
+        <img class="remove-spec" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB4PSIwIiB5PSIwIiB2aWV3Qm94PSIwIDAgNjAgNjAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDUxMiA1MTIiIHhtbDpzcGFjZT0icHJlc2VydmUiPjxnPjxwYXRoIGZpbGw9IiNlNThiMGEiIGQ9Ik0xIDE4VjRhMyAzIDAgMCAxIDMtM2gxNC4xOWE1IDUgMCAwIDEgMy4yIDEuMTU5bDMuMjE4IDIuNjgyQTUgNSAwIDAgMCAyNy44MSA2SDU2YTMgMyAwIDAgMSAzIDN2OXoiIG9wYWNpdHk9IjEiIGRhdGEtb3JpZ2luYWw9IiNlNThiMGEiPjwvcGF0aD48cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNNiAxNnYtM2EzIDMgMCAwIDEgMy0zaDQyYTMgMyAwIDAgMSAzIDN2M3oiIG9wYWNpdHk9IjEiIGRhdGEtb3JpZ2luYWw9IiNmZmZmZmYiPjwvcGF0aD48cmVjdCB3aWR0aD0iNTgiIGhlaWdodD0iMzgiIHg9IjEiIHk9IjE1IiBmaWxsPSIjZmZiOTBiIiByeD0iMyIgb3BhY2l0eT0iMSIgZGF0YS1vcmlnaW5hbD0iI2ZmYjkwYiI+PC9yZWN0PjxjaXJjbGUgY3g9IjMwIiBjeT0iNDEiIHI9IjE4IiBmaWxsPSIjZTIzZDRhIiBvcGFjaXR5PSIxIiBkYXRhLW9yaWdpbmFsPSIjZTIzZDRhIj48L2NpcmNsZT48cGF0aCBmaWxsPSIjZmZmZmZmIiBkPSJNMzguNDEgNDYuNTlhMS45OTQgMS45OTQgMCAxIDEtMi44MiAyLjgyTDMwIDQzLjgybC01LjU5IDUuNTlhMS45OTQgMS45OTQgMCAwIDEtMi44Mi0yLjgyTDI3LjE4IDQxbC01LjU5LTUuNTlhMS45OTQgMS45OTQgMCAwIDEgMi44Mi0yLjgyTDMwIDM4LjE4bDUuNTktNS41OWExLjk5NCAxLjk5NCAwIDAgMSAyLjgyIDIuODJMMzIuODIgNDF6IiBvcGFjaXR5PSIxIiBkYXRhLW9yaWdpbmFsPSIjZmZmZmZmIj48L3BhdGg+PC9nPjwvc3ZnPg==" alt="Remove Specification">
+        </div>
+        </div>
+        `;
+
+        // Add functionality to remove the row
+        specificationRow.querySelector('.remove-specification').addEventListener('click', function () {
+            specificationRow.remove();
+        });
+
+        document.querySelector('.specificationRows').appendChild(specificationRow);
+
+        // Clear the inputs after adding the row
+        document.querySelector('.specificationName').value = '';
+        fileInput.value = '';
+    } else {
+        alert('Please fill in the title and select a document before adding a specification.');
+    }
+});
+ //--// dynamically adding specification rows
+ 
+
+</script>
+</body>
+
+</html>
