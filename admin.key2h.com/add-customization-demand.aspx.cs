@@ -29,10 +29,14 @@ public partial class adminkey2hcom_AddCustomizationDemand : System.Web.UI.Page
         {
 
             string clientLoginId = CU.GetClientLoginID();
-            Userid = !string.IsNullOrEmpty(clientLoginId) && clientLoginId.Contains("clientid=")
-                ? clientLoginId.Replace("clientid=", "")
-                : clientLoginId;
-
+            if (!string.IsNullOrEmpty(clientLoginId) && clientLoginId.Contains("clientid="))
+            {
+                Userid = clientLoginId.Replace("clientid=", "");
+            }
+            else
+            {
+                Response.Redirect("index.aspx");
+            }
             if (!IsPostBack)
             {
                 BindAllDDl();

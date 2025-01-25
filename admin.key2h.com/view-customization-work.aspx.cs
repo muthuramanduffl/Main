@@ -29,7 +29,7 @@ public partial class adminkey2hcom_ViewCustomizationWork : System.Web.UI.Page
         }
         else
         {
-            clientId = clientLoginId;
+            Response.Redirect("index.aspx");
         }
         if (!IsPostBack)
         {

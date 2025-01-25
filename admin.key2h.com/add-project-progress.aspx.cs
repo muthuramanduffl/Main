@@ -31,7 +31,7 @@ public partial class adminkey2hcomaddprojectprogress : System.Web.UI.Page
         }
         else
         {
-            clientId = clientLoginId;
+            Response.Redirect("index.aspx");
         }
         if (Request.QueryString["ProgressID"] != null)
         {

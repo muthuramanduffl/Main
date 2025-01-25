@@ -29,8 +29,8 @@ public partial class adminkey2hcom_ViewDemand : System.Web.UI.Page
             clientId = clientLoginId.Replace("clientid=", "");
         }
         else
-        { 
-            clientId = clientLoginId; 
+        {
+            Response.Redirect("index.aspx");
         }
         if (!IsPostBack)
         {

@@ -29,6 +29,7 @@ public partial class adminkey2hcom_AddDemand : System.Web.UI.Page
     private static string clientId;
     protected void Page_Load(object sender, EventArgs e)
     {
+       
         string clientLoginId = CU.GetClientLoginID();
         if (!string.IsNullOrEmpty(clientLoginId) && clientLoginId.Contains("clientid="))
         {
@@ -36,7 +37,7 @@ public partial class adminkey2hcom_AddDemand : System.Web.UI.Page
         }
         else
         {
-            clientId = clientLoginId;
+            Response.Redirect("index.aspx");
         }
         if (!IsPostBack)
         {

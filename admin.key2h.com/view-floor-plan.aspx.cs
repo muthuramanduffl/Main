@@ -14,7 +14,10 @@ public partial class adminkey2hcom_ViewRM : System.Web.UI.Page
     DataRow dr1; 
     protected void Page_Load(object sender, EventArgs e)
     {
-        Bind(); 
+        if (!IsPostBack)
+        {
+            Bind();
+        }
     }
     public string Bindprojectname(int Prid)
     {

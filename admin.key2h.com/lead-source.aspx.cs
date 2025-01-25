@@ -8,15 +8,17 @@ using System.Data;
 
 public partial class adminkey2hcomleadsource : System.Web.UI.Page
 {
-    Key2hProject K2 = new Key2hProject();
-    ClientdashboardIssue CI = new ClientdashboardIssue();
+
+    ClientDashboardError CI = new ClientDashboardError();
     ClientUsers CU = new ClientUsers();
     Key2hProjectRM KF = new Key2hProjectRM();
-    DataTable dt1 = new DataTable();
-    DataRow dr1; 
+
     protected void Page_Load(object sender, EventArgs e)
     {
-        Bind(); 
+        if (!IsPostBack)
+        {
+            Bind();
+        }
     }
     public void Bind()
     {
@@ -36,12 +38,8 @@ public partial class adminkey2hcomleadsource : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            CI.Pagename = "lead-source.aspx";
-            CI.MethodOrFunctionname = "Bind";
-            CI.ErrrMsg = ex.Message.ToString();
-            CI.IssueStatus = "Not Fixed";
-            CI.AddClientdashboardissues(CI);
-        } 
+            CI.StoreExceptionMessage("lead-source.aspx", "Bind", ex.Message, "Not Fixed");
+        }
     }
     
     public DataTable Get()
@@ -53,12 +51,8 @@ public partial class adminkey2hcomleadsource : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            CI.Pagename = "lead-source.aspx";
-            CI.MethodOrFunctionname = "Get";
-            CI.ErrrMsg = ex.Message.ToString();
-            CI.IssueStatus = "Not Fixed";
-            CI.AddClientdashboardissues(CI);
-        } 
+            CI.StoreExceptionMessage("lead-source.aspx", "Get", ex.Message, "Not Fixed");
+        }
         return dt;
     }
 
@@ -142,12 +136,8 @@ public partial class adminkey2hcomleadsource : System.Web.UI.Page
             }
             catch (Exception ex)
             {
-                CI.Pagename = "lead-source.aspx";
-                CI.MethodOrFunctionname = "Edit LeadSource Name";
-                CI.ErrrMsg = ex.Message.ToString();
-                CI.IssueStatus = "Not Fixed";
-                CI.AddClientdashboardissues(CI);
-            } 
+                CI.StoreExceptionMessage("lead-source.aspx", "repeater save", ex.Message, "Not Fixed");
+            }
             Bind();
         }
     }
@@ -279,11 +269,7 @@ public partial class adminkey2hcomleadsource : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            CI.Pagename = "lead-source.aspx";
-            CI.MethodOrFunctionname = "Isalreadyexist";
-            CI.ErrrMsg = ex.Message.ToString();
-            CI.IssueStatus = "Not Fixed";
-            CI.AddClientdashboardissues(CI);
+            CI.StoreExceptionMessage("lead-source.aspx", "Isalreadyexist", ex.Message, "Not Fixed");
         }
         return isavail;
     }
@@ -301,11 +287,7 @@ public partial class adminkey2hcomleadsource : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            CI.Pagename = "lead-source.aspx";
-            CI.MethodOrFunctionname = "AddLeadSource";
-            CI.ErrrMsg = ex.Message.ToString();
-            CI.IssueStatus = "Not Fixed";
-            CI.AddClientdashboardissues(CI);
+            CI.StoreExceptionMessage("lead-source.aspx", "AddLeadSource", ex.Message, "Not Fixed");
         }
         return ret;
     }

@@ -10,7 +10,7 @@
                     <div class="d-flex">
                         <h2 class="text-white mb-0 fw-bold text-uppercase">View Cost Details</h2>
                         <ul class="breadcrumbs">
-                            <li class="nav-home pt-1">
+                            <li class="nav-home pt-1"> 
                                 <a href="dashboard.html">
                                     <i class="fa fa-home"></i>
                                 </a>

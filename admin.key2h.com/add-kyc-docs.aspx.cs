@@ -28,7 +28,7 @@ public partial class adminkey2hcom_AddKYCDocs : System.Web.UI.Page
             }
             else
             {
-                cId = clientLoginId;
+                Response.Redirect("index.aspx");
             }
 
 

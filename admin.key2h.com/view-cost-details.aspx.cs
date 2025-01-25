@@ -26,7 +26,7 @@ public partial class adminkey2hcom_ViewCostDetails : System.Web.UI.Page
         }
         else
         {
-            clientId = clientLoginId;
+            Response.Redirect("index.aspx");
         }
         if (!IsPostBack)
         {
@@ -47,8 +47,7 @@ public partial class adminkey2hcom_ViewCostDetails : System.Web.UI.Page
                 ddlprojectname.DataTextField = "ProjectName";
                 ddlprojectname.DataValueField = "ProjectID";
                 ddlprojectname.DataBind();
-                ddlprojectname.Items.Insert(0, new ListItem("All", ""));
-               
+                ddlprojectname.Items.Insert(0, new ListItem("All", ""));    
             }
             else
             {

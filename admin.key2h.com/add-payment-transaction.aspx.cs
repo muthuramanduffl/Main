@@ -34,7 +34,7 @@ public partial class adminkey2hcom_AddPaymentTransaction : System.Web.UI.Page
         }
         else
         {
-            clientId = clientLoginId;
+            Response.Redirect("index.aspx");
         }
         if (Request.QueryString["TransactionID"] == null && Request.QueryString["FlatID"] == null)
         {

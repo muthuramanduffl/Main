@@ -15,8 +15,11 @@ public partial class adminkey2hcom_WhatsHappening : System.Web.UI.Page
     DataTable dt1 = new DataTable();
     DataRow dr1; 
     protected void Page_Load(object sender, EventArgs e)
-    {       
-        Bind();
+    {
+        if (!IsPostBack) 
+        {
+            Bind();
+        }
     }
 
     public void Bind()

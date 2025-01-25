@@ -9,13 +9,15 @@ using System.Collections.Generic;
 public partial class adminkey2hcom_ViewUser : System.Web.UI.Page
 {
     Key2hProjectRM KF = new Key2hProjectRM();
-    ClientdashboardIssue CI = new ClientdashboardIssue();
-    ClientUsers CU = new ClientUsers();
-    DataTable dt1 = new DataTable();
-    DataRow dr1; 
+    ClientDashboardError CI = new ClientDashboardError();
+
+
     protected void Page_Load(object sender, EventArgs e)
     {
-        Bind(0) 
+        if (!IsPostBack)
+        {
+            Bind(0);
+        }
     }
    
     public DataTable Get()
@@ -27,11 +29,7 @@ public partial class adminkey2hcom_ViewUser : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            CI.Pagename = "view-users.aspx";
-            CI.MethodOrFunctionname = "Get";
-            CI.ErrrMsg = ex.Message.ToString();
-            CI.IssueStatus = "Not Fixed";
-            CI.AddClientdashboardissues(CI);
+            CI.StoreExceptionMessage("view-user.aspx", "Get", ex.Message, "Not Fixed");
         } 
         return dt;
     }
@@ -151,14 +149,15 @@ public partial class adminkey2hcom_ViewUser : System.Web.UI.Page
         try
         {
             if (pageIndex == 0)
-                PageIndex = 1; 
+                PageIndex = 1;
             DataTable dt = Get();
-            int totalRecords = dt.Rows.Count;
-            int pageSize = 10;
-            int startRow = pageIndex * pageSize;
 
             if (dt != null && dt.Rows.Count > 0)
             {
+               
+                int totalRecords = dt.Rows.Count;
+                int pageSize = 10;
+                int startRow = pageIndex * pageSize;
                 rpruser.Visible = true;
                 rpruser.DataSource = dt.AsEnumerable().Skip(startRow).Take(pageSize).CopyToDataTable();
                 lblcount.Text = Convert.ToString(dt.Rows.Count);
@@ -179,11 +178,7 @@ public partial class adminkey2hcom_ViewUser : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            CI.Pagename = "view-users.aspx";
-            CI.MethodOrFunctionname = "Bind";
-            CI.ErrrMsg = ex.Message.ToString();
-            CI.IssueStatus = "Not Fixed";
-            CI.AddClientdashboardissues(CI);
-        } 
+            CI.StoreExceptionMessage("view-user.aspx", "Bind", ex.Message, "Not Fixed");
+        }
     } 
 }

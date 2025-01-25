@@ -25,12 +25,15 @@ public partial class adminkey2hcom_AddCustomizationWork : System.Web.UI.Page
     {
         try
         {
-            Userid = "1";
-
-            // string clientLoginId = CU.GetClientLoginID();
-            // Userid = !string.IsNullOrEmpty(clientLoginId) && clientLoginId.Contains("clientid=")
-            //     ? clientLoginId.Replace("clientid=", "")
-            //     : clientLoginId;
+            string clientLoginId = CU.GetClientLoginID();
+            if (!string.IsNullOrEmpty(clientLoginId) && clientLoginId.Contains("clientid="))
+            {
+                Userid = clientLoginId.Replace("clientid=", "");
+            }
+            else
+            {
+                Response.Redirect("index.aspx");
+            }
 
             if (!IsPostBack)
             {

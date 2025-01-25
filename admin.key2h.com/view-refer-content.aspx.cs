@@ -47,11 +47,12 @@ public partial class adminkey2hcom_ViewReferContent : System.Web.UI.Page
             if (pageIndex == 0)
                 pageIndex = 1; 
             DataTable dt = Get();  
-            int totalRecords = dt.Rows.Count;
-            int pageSize = 10;
-            int startRow = pageIndex * pageSize;
+           
             if (dt.Rows.Count > 0)
             {
+                int totalRecords = dt.Rows.Count;
+                int pageSize = 10;
+                int startRow = pageIndex * pageSize;
                 rpruser.Visible = true;
                 rpruser.DataSource = dt;
                 Session["Projects"] = dt.DefaultView;

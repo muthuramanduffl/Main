@@ -7,16 +7,13 @@ public partial class adminkey2hcom_ReferralList : System.Web.UI.Page
 {
 
     Key2hRefer LS = new Key2hRefer();
-    DataTable dt1 = new DataTable();
-    DataRow dr1;
 
-    ClientdashboardIssue CI = new ClientdashboardIssue();
+    ClientDashboardError CI = new ClientDashboardError();
     ClientUsers CU = new ClientUsers();
     Key2hProjectblock KB = new Key2hProjectblock();
 
     Key2hFlat KF = new Key2hFlat();
     Key2hProject K2 = new Key2hProject();
-    Key2hCustomer KC = new Key2hCustomer(); 
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
@@ -47,11 +44,7 @@ public partial class adminkey2hcom_ReferralList : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            CI.Pagename = "referral-list.aspx";
-            CI.MethodOrFunctionname = "ddlBindProject";
-            CI.ErrrMsg = ex.Message.ToString();
-            CI.IssueStatus = "Not Fixed";
-            CI.AddClientdashboardissues(CI);
+            CI.StoreExceptionMessage("referral-list.aspx", "ddlBindProject", ex.Message, "Not Fixed");
         }
     }
 
@@ -78,12 +71,8 @@ public partial class adminkey2hcom_ReferralList : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            CI.Pagename = "referral-list.aspx";
-            CI.MethodOrFunctionname = "Bindproject";
-            CI.ErrrMsg = ex.Message.ToString();
-            CI.IssueStatus = "Not Fixed";
-            CI.AddClientdashboardissues(CI);
-        } 
+            CI.StoreExceptionMessage("referral-list.aspx", "Bindproject", ex.Message, "Not Fixed");
+        }
         return Project;
     }
 
@@ -100,12 +89,8 @@ public partial class adminkey2hcom_ReferralList : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            CI.Pagename = "referral-list.aspx";
-            CI.MethodOrFunctionname = "BindBlockname";
-            CI.ErrrMsg = ex.Message.ToString();
-            CI.IssueStatus = "Not Fixed";
-            CI.AddClientdashboardissues(CI);
-        } 
+            CI.StoreExceptionMessage("referral-list.aspx", "BindBlockname", ex.Message, "Not Fixed");
+        }
         return Block;
     }
     public string ViewFlatNameByFlatID(int ID)
@@ -121,12 +106,8 @@ public partial class adminkey2hcom_ReferralList : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            CI.Pagename = "referral-list.aspx";
-            CI.MethodOrFunctionname = "ViewFlatNameByFlatID";
-            CI.ErrrMsg = ex.Message.ToString();
-            CI.IssueStatus = "Not Fixed";
-            CI.AddClientdashboardissues(CI);
-        } 
+            CI.StoreExceptionMessage("referral-list.aspx", "ViewFlatNameByFlatID", ex.Message, "Not Fixed");
+        }
         return Block;
     }
 
@@ -157,12 +138,8 @@ public partial class adminkey2hcom_ReferralList : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            CI.Pagename = "referral-list.aspx";
-            CI.MethodOrFunctionname = "Bind";
-            CI.ErrrMsg = ex.Message.ToString();
-            CI.IssueStatus = "Not Fixed";
-            CI.AddClientdashboardissues(CI);
-        } 
+            CI.StoreExceptionMessage("referral-list.aspx", "Bind", ex.Message, "Not Fixed");
+        }
     }
 
     public DataTable Get()
@@ -211,12 +188,8 @@ public partial class adminkey2hcom_ReferralList : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            CI.Pagename = "referral-list.aspx";
-            CI.MethodOrFunctionname = "Get";
-            CI.ErrrMsg = ex.Message.ToString();
-            CI.IssueStatus = "Not Fixed";
-            CI.AddClientdashboardissues(CI);
-        } 
+            CI.StoreExceptionMessage("referral-list.aspx", "Get", ex.Message, "Not Fixed");
+        }
         return dt;
     } 
     protected void ddlprojectname_SelectedIndexChanged(object sender, EventArgs e)

@@ -26,7 +26,7 @@ public partial class adminkey2hcom_flat : System.Web.UI.Page
         }
         else
         {
-            clientId = clientLoginId;
+            Response.Redirect("index.aspx");
         }
         if (!IsPostBack)
         { 

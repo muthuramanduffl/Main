@@ -29,7 +29,7 @@ public partial class Adminkeyhcomaddblock : System.Web.UI.Page
             }
             else
             {
-                Userid = clientLoginId;
+                Response.Redirect("index.aspx");
             }
             if (!IsPostBack)
             {

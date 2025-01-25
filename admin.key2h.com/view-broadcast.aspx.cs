@@ -10,10 +10,8 @@ public partial class adminkey2hcom_ViewBroadcast : System.Web.UI.Page
 {
     Key2hProject K2 = new Key2hProject();
     Key2hProjectbroadcast KF = new Key2hProjectbroadcast();
-    ClientdashboardIssue CI = new ClientdashboardIssue();
-    ClientDashboardError CE = new ClientDashboardError(); 
-    ClientUsers CU = new ClientUsers();
-    DataTable dt1 = new DataTable();
+    ClientDashboardError CI=new ClientDashboardError();
+
     DataRow dr1;
 
     protected void Page_Load(object sender, EventArgs e)
@@ -39,7 +37,7 @@ public partial class adminkey2hcom_ViewBroadcast : System.Web.UI.Page
             }
             catch (Exception ex)
             {
-                //CI.StoreExceptionMessage("view-broadcast.aspx", "pageload", ex.Message, "Not Fixed");
+                CI.StoreExceptionMessage("view-broadcast.aspx", "pageload", ex.Message, "Not Fixed");
             }
             Bind(0);
         }
@@ -55,11 +53,12 @@ public partial class adminkey2hcom_ViewBroadcast : System.Web.UI.Page
             if (pageIndex == 0)
                 PageIndex = 1;
             DataTable dt = Get();
-            int totalRecords = dt.Rows.Count;
-            int pageSize = 10;
-            int startRow = pageIndex * pageSize; 
+           
             if (dt != null && dt.Rows.Count > 0)
             {
+                int totalRecords = dt.Rows.Count;
+                int pageSize = 10;
+                int startRow = pageIndex * pageSize;
                 rpruser.Visible = true;
                 rpruser.DataSource = dt.AsEnumerable().Skip(startRow).Take(pageSize).CopyToDataTable();
                 lblcount.Text = Convert.ToString(dt.Rows.Count);
@@ -78,22 +77,25 @@ public partial class adminkey2hcom_ViewBroadcast : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            CI.Pagename = "view-broadcast.aspx";
-            CI.MethodOrFunctionname = "Bind";
-            CI.ErrrMsg = ex.Message.ToString();
-            CI.IssueStatus = "Not Fixed";
-            CI.AddClientdashboardissues(CI);
-        } 
+            CI.StoreExceptionMessage("view-broadcast.aspx", "Bind", ex.Message, "Not Fixed");
+        }
     }
 
     public string Bindprojectname(int Prid)
     {
         string strname = string.Empty;
-        DataTable dt = K2.ViewAllProjectsByid(Prid);
-        if (dt.Rows.Count > 0)
+        try
         {
-            strname = Convert.ToString(dt.Rows[0]["ProjectName"]);
-        } 
+            DataTable dt = K2.ViewAllProjectsByid(Prid);
+            if (dt.Rows.Count > 0)
+            {
+                strname = Convert.ToString(dt.Rows[0]["ProjectName"]);
+            }
+        }
+        catch(Exception ex)
+        {
+            CI.StoreExceptionMessage("view-broadcast.aspx", "Bindprojectname", ex.Message, "Not Fixed");
+        }
         return strname;
     }
      
@@ -107,11 +109,7 @@ public partial class adminkey2hcom_ViewBroadcast : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            CI.Pagename = "view-broadcast.aspx";
-            CI.MethodOrFunctionname = "Get";
-            CI.ErrrMsg = ex.Message.ToString();
-            CI.IssueStatus = "Not Fixed";
-            CI.AddClientdashboardissues(CI);
+            CI.StoreExceptionMessage("view-broadcast.aspx", "Get", ex.Message, "Not Fixed");
         }
         return dt;
     }

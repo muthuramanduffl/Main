@@ -27,7 +27,7 @@ public partial class adminkey2hcom_ViewflatProgress : System.Web.UI.Page
         }
         else
         {
-            clientId = clientLoginId;
+            Response.Redirect("index.aspx");
         }
         if (!IsPostBack)
         {
@@ -185,7 +185,7 @@ public partial class adminkey2hcom_ViewflatProgress : System.Web.UI.Page
         {
             if (pageIndex == 0)
                 PageIndex = 1;
-            DataTable dt = Get();
+               DataTable dt = Get();
             if (dt != null && dt.Rows.Count > 0)
             {
                 int totalRecords = dt.Rows.Count;

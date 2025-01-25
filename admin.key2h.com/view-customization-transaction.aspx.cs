@@ -28,7 +28,7 @@ public partial class adminkey2hcom_ViewCustomizationTransaction : System.Web.UI.
         }
         else
         {
-            clientId = clientLoginId;
+            Response.Redirect("index.aspx");
         }
         if (!IsPostBack)
         {

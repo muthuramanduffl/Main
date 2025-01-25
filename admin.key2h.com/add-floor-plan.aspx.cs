@@ -24,7 +24,7 @@ public partial class adminkey2hcom_AddFloorPlan : System.Web.UI.Page
         }
         else
         {
-            Userid = clientLoginId;
+            Response.Redirect("index.aspx");
         }
         if (!IsPostBack)
         {

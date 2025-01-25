@@ -9,8 +9,6 @@ using System.Web.UI.WebControls;
 public partial class view_CostPaymentDetails : System.Web.UI.Page
 {
     Key2hLeadSource LS = new Key2hLeadSource();
-    DataTable dt1 = new DataTable();
-    DataRow dr1;
 
     ClientDashboardError CI = new ClientDashboardError();
     ClientUsers CU = new ClientUsers();
@@ -31,7 +29,7 @@ public partial class view_CostPaymentDetails : System.Web.UI.Page
         }
         else
         {
-            clientId = clientLoginId;
+            Response.Redirect("index.aspx");
         }
         if (!IsPostBack)
         {

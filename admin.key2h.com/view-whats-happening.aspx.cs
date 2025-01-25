@@ -10,8 +10,7 @@ public partial class adminkey2hcom_WhatsHappening : System.Web.UI.Page
 {
     Key2hProject K2 = new Key2hProject();
     Key2hWhatshappening KF = new Key2hWhatshappening();
-    ClientdashboardIssue CI = new ClientdashboardIssue();
-    ClientDashboardError CE = new ClientDashboardError();
+    ClientDashboardError CI = new ClientDashboardError();
     ClientUsers CU = new ClientUsers();
     DataTable dt1 = new DataTable();
     DataRow dr1;
@@ -39,7 +38,7 @@ public partial class adminkey2hcom_WhatsHappening : System.Web.UI.Page
             }
             catch (Exception ex)
             {
-                //CI.StoreExceptionMessage("view-whats-happening.aspx", "pageload", ex.Message, "Not Fixed");
+                CI.StoreExceptionMessage("view-whats-happening.aspx", "pageload", ex.Message, "Not Fixed");
             }
             Bind(0);
         }
@@ -55,11 +54,12 @@ public partial class adminkey2hcom_WhatsHappening : System.Web.UI.Page
             if (pageIndex == 0)
                 PageIndex = 1;
             DataTable dt = Get();
-            int totalRecords = dt.Rows.Count;
-            int pageSize = 10;
-            int startRow = pageIndex * pageSize; 
+           
             if (dt != null && dt.Rows.Count > 0)
             {
+                int totalRecords = dt.Rows.Count;
+                int pageSize = 10;
+                int startRow = pageIndex * pageSize;
                 rpruser.Visible = true;
                 rpruser.DataSource = dt.AsEnumerable().Skip(startRow).Take(pageSize).CopyToDataTable();
                 lblcount.Text = Convert.ToString(dt.Rows.Count);
@@ -78,22 +78,25 @@ public partial class adminkey2hcom_WhatsHappening : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            CI.Pagename = "view-whats-happening.aspx";
-            CI.MethodOrFunctionname = "Bind";
-            CI.ErrrMsg = ex.Message.ToString();
-            CI.IssueStatus = "Not Fixed";
-            CI.AddClientdashboardissues(CI);
-        } 
+            CI.StoreExceptionMessage("view-whats-happening.aspx", "Bind", ex.Message, "Not Fixed");
+        }
     }
     
     public string Bindprojectname(int Prid)
     {
         string strname = string.Empty;
-       DataTable dt=K2.ViewAllProjectsByid(Prid);
-        if (dt.Rows.Count>0)
+        try
         {
-          strname= Convert.ToString(dt.Rows[0]["ProjectName"]);
-        } 
+            DataTable dt = K2.ViewAllProjectsByid(Prid);
+            if (dt.Rows.Count > 0)
+            {
+                strname = Convert.ToString(dt.Rows[0]["ProjectName"]);
+            }
+        }
+        catch (Exception ex)
+        {
+            CI.StoreExceptionMessage("view-whats-happening.aspx", "Bindprojectname", ex.Message, "Not Fixed");
+        }
         return strname;
     }
 
@@ -106,12 +109,8 @@ public partial class adminkey2hcom_WhatsHappening : System.Web.UI.Page
         }
         catch (Exception ex)
         {
-            CI.Pagename = "view-whats-happening.aspx";
-            CI.MethodOrFunctionname = "Get";
-            CI.ErrrMsg = ex.Message.ToString();
-            CI.IssueStatus = "Not Fixed";
-            CI.AddClientdashboardissues(CI);
-        } 
+            CI.StoreExceptionMessage("view-whats-happening.aspx", "Get", ex.Message, "Not Fixed");
+        }
         return dt;
     }
 
@@ -165,11 +164,8 @@ public partial class adminkey2hcom_WhatsHappening : System.Web.UI.Page
             }
             catch (Exception ex)
             {
-                CI.Pagename = "view-whats-happening.aspx";
-                CI.MethodOrFunctionname = "Repeater1_ItemCommand Delete";
-                CI.ErrrMsg = ex.Message.ToString();
-                CI.IssueStatus = "Not Fixed"; 
-            } 
+                CI.StoreExceptionMessage("view-whats-happening.aspx", "Repeater1_ItemCommand Delete", ex.Message, "Not Fixed");
+            }
         }
     }
 

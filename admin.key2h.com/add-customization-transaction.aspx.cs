@@ -34,10 +34,14 @@ public partial class adminkey2hcom_AddCustomizationTransaction : System.Web.UI.P
         {
 
             string clientLoginId = CU.GetClientLoginID();
-            clientId = !string.IsNullOrEmpty(clientLoginId) && clientLoginId.Contains("clientid=")
-                ? clientLoginId.Replace("clientid=", "")
-                : clientLoginId;
-
+            if (!string.IsNullOrEmpty(clientLoginId) && clientLoginId.Contains("clientid="))
+            {
+                clientId = clientLoginId.Replace("clientid=", "");
+            }
+            else
+            {
+                Response.Redirect("index.aspx");
+            }
 
             if (!IsPostBack)
             {

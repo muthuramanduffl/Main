@@ -27,8 +27,8 @@ public partial class adminkey2hcom_AddBroadcast : System.Web.UI.Page
             Userid = clientLoginId.Replace("clientid=", "");
         }
         else
-        { 
-            Userid = clientLoginId;
+        {
+            Response.Redirect("index.aspx");
         }
         if (!IsPostBack)
         {

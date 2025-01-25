@@ -12,7 +12,7 @@ public partial class adminkey2hcom_ViewBlock : System.Web.UI.Page
     DataRow dr1; 
     Key2hProjectblock K2b = new Key2hProjectblock();
     Key2hProject K2 = new Key2hProject();
-    ClientDashboardError CI = new ClientDashboardError(); 
+ClientDashboardError CI=new ClientDashboardError();
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
@@ -25,13 +25,20 @@ public partial class adminkey2hcom_ViewBlock : System.Web.UI.Page
     public void Bindblock()
     {
         DataTable dt = K2.ViewActiveprojects();
-        if (dt.Rows.Count > 0)
+        try
         {
-            ddlprojects.DataSource = dt;
-            ddlprojects.DataTextField = "ProjectName";
-            ddlprojects.DataValueField = "ProjectID";
-            ddlprojects.DataBind();
-            ddlprojects.Items.Insert(0, new ListItem("All", ""));
+            if (dt.Rows.Count > 0)
+            {
+                ddlprojects.DataSource = dt;
+                ddlprojects.DataTextField = "ProjectName";
+                ddlprojects.DataValueField = "ProjectID";
+                ddlprojects.DataBind();
+                ddlprojects.Items.Insert(0, new ListItem("All", ""));
+            }
+        }
+        catch(Exception ex)
+        {
+            CI.StoreExceptionMessage("view-block.aspx", "Bindblock", ex.Message, "Not Fixed");
         }
     }
      
@@ -39,76 +46,113 @@ public partial class adminkey2hcom_ViewBlock : System.Web.UI.Page
     {
         string city = string.Empty;
         DataTable dt = K2.ViewcityByCityid(ID);
-        if (dt.Rows.Count > 0)
+        try
         {
-            city = dt.Rows[0]["CityName"].ToString();
-        } 
+            if (dt.Rows.Count > 0)
+            {
+                city = dt.Rows[0]["CityName"].ToString();
+            }
+        }
+        catch(Exception ex)
+        {
+            CI.StoreExceptionMessage("view-block.aspx", "Bindcity", ex.Message, "Not Fixed");
+        }
         return city;
     }
      
     public string BindState(int ID)
     {
         string city = string.Empty;
-        DataTable dt = K2.ViewstateByID(ID);
-        if (dt.Rows.Count > 0)
+        try
         {
-            city = dt.Rows[0]["StateName"].ToString();
-        } 
+            DataTable dt = K2.ViewstateByID(ID);
+            if (dt.Rows.Count > 0)
+            {
+                city = dt.Rows[0]["StateName"].ToString();
+            }
+        }
+        catch(Exception ex)
+        {
+            CI.StoreExceptionMessage("view-block.aspx", "BindState", ex.Message, "Not Fixed");
+        }
         return city;
     }
      
     public void Bind(int pageIndex)
     {
-        if (pageIndex == 0)
-            PageIndex = 1;
-        DataTable dt = Get();
-        int totalRecords = dt.Rows.Count;
-        int pageSize = 10;
-        int startRow = pageIndex * pageSize;
-        if (dt.Rows.Count > 0)
+        try
         {
-            rpruser.Visible = true;
-            rpruser.DataSource = dt.AsEnumerable().Skip(startRow).Take(pageSize).CopyToDataTable();
-            Session["Blocks"] = dt.DefaultView;
-            lblcount.Text = "Total no.of Blocks :"+ Convert.ToString(dt.Rows.Count);
-            rpruser.DataBind();
-            PopulatePager(totalRecords, pageIndex + 1, pageSize);
-            DivNoDataFound.Style.Add("display", "none"); 
+            if (pageIndex == 0)
+                PageIndex = 1;
+            DataTable dt = Get();
+
+            if (dt.Rows.Count > 0)
+            {
+                int totalRecords = dt.Rows.Count;
+                int pageSize = 10;
+                int startRow = pageIndex * pageSize;
+                rpruser.Visible = true;
+                rpruser.DataSource = dt.AsEnumerable().Skip(startRow).Take(pageSize).CopyToDataTable();
+                Session["Blocks"] = dt.DefaultView;
+                lblcount.Text = "Total no.of Blocks :" + Convert.ToString(dt.Rows.Count);
+                rpruser.DataBind();
+                PopulatePager(totalRecords, pageIndex + 1, pageSize);
+                DivNoDataFound.Style.Add("display", "none");
+            }
+            else
+            {
+                Session["Blocks"] = null;
+                rpruser.Visible = false;
+                lblcount.Text = "";
+                DivNoDataFound.Style.Add("display", "block");
+            }
         }
-        else
+        catch(Exception ex)
         {
-            Session["Blocks"] = null;
-            rpruser.Visible = false;
-            lblcount.Text = "";
-            DivNoDataFound.Style.Add("display", "block");
-        } 
+            CI.StoreExceptionMessage("view-block.aspx", "Bind", ex.Message, "Not Fixed");
+        }
     }
      
     public string Bindprojectname(int Prid)
     {
         string strname = string.Empty;
-       DataTable dt=K2.ViewAllProjectsByid(Prid);
-        if (dt.Rows.Count>0)
+        try
         {
-          strname= Convert.ToString(dt.Rows[0]["ProjectName"]);
-        } 
+            DataTable dt = K2.ViewAllProjectsByid(Prid);
+            if (dt.Rows.Count > 0)
+            {
+                strname = Convert.ToString(dt.Rows[0]["ProjectName"]);
+            }
+        }
+        catch(Exception ex)
+        {
+            CI.StoreExceptionMessage("view-block.aspx", "Bindprojectname", ex.Message, "Not Fixed");
+        }
         return strname;
     }
 
     public DataTable Get()
-    { 
-        string projectid = string.Empty;
-         string prostatus = string.Empty; 
-         string status = string.Empty; 
-         if (!string.Equals(ddlstatus.SelectedValue, "All"))
+    {
+        DataTable dt = new DataTable();
+        try
         {
-            prostatus = ddlstatus.SelectedValue;
+            string projectid = string.Empty;
+            string prostatus = string.Empty;
+            string status = string.Empty;
+            if (!string.Equals(ddlstatus.SelectedValue, "All"))
+            {
+                prostatus = ddlstatus.SelectedValue;
+            }
+            if (!string.Equals(ddlprojects.SelectedValue, ""))
+            {
+                projectid = ddlprojects.SelectedValue;
+            }
+           dt = K2b.ViewAllBlock("", prostatus, projectid);
         }
-         if (!string.Equals(ddlprojects.SelectedValue, ""))
+        catch(Exception ex)
         {
-            projectid = ddlprojects.SelectedValue;
-        } 
-        DataTable dt = K2b.ViewAllBlock("", prostatus, projectid); 
+            CI.StoreExceptionMessage("view-block.aspx", "Get", ex.Message, "Not Fixed");
+        }
         return dt;
     }
      

@@ -34,7 +34,7 @@ public partial class adminkey2hcomaddflatprogress : System.Web.UI.Page
         }
         else
         {
-            clientId = clientLoginId;
+            Response.Redirect("index.aspx");
         }
         if (Request.QueryString["FlatProgressID"] != null)
         {

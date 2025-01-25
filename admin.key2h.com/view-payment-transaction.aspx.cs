@@ -24,8 +24,8 @@ public partial class adminkey2hcom_ViewPaymentTransaction : System.Web.UI.Page
             clientId = clientLoginId.Replace("clientid=", "");
         }
         else
-        { 
-            clientId = clientLoginId;
+        {
+            Response.Redirect("index.aspx");
         }
         if (!IsPostBack)
         {
